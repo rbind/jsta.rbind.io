@@ -91,7 +91,8 @@ disable_comments: true
 <li> <b>Stachelek J.</b> and Madden C.J. 2015. Application of Inverse Path Distance Weighting for high density spatial mapping of coastal water quality patterns. <i>International Journal of Geographical Information Science</i>. <a aria-label="doi link" target="_blank" href="https://doi.org/10.1080/13658816.2015.1018833"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i></a> <a aria-label="download link" target="_blank" href="../pdf/stachmadden2015am.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a>
 </li>
 
-<li> <b>Stachelek J.</b> and Dunton K.H. 2013. Freshwater inflow requirements for the Nueces Delta, Texas: Spartina alterniflora as an indicator of ecosystem condition. <i>Texas Water Journal</i>. 4(2), 62-73. <a aria-label="download link" target="_blank" href="../pdf/StachelekDunton2013.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a>
+<li> <b>Stachelek J.</b> and Dunton K.H. 2013. Freshwater inflow requirements for the Nueces Delta, Texas: Spartina alterniflora as an indicator of ecosystem condition. <i>Texas Water Journal</i>. 4(2), 62-73. <a aria-label="doi link" target="_blank" href="https://doi.org/10.21423/twj.v4i2.6354"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i></a> <a aria-label="download link" target="_blank" href="../pdf/StachelekDunton2013.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a>
+
 </li>
 
 </ol>

@@ -36,7 +36,7 @@ disable_comments: true
 
 <li>Hanson, P., Stillman, A.B., Jia, X., Karpatne, A., Dugan, H.A., Carey, C.C., <b>Stachelek, J.</b>, Ward, N.K, Zhang, Y., Read, J.S., Kumar, V., 2020. Predicting lake surface water phosphorus dynamics using process-guided machine learning. <i>Ecological Modelling.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1016/j.ecolmodel.2020.109136"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
-<li><b>Stachelek, J.</b>, Weng, W., Carey, C.C., Kemanian, A.R., Cobourn, K.M., Wagner, T., Weathers, K.C., Soranno, P.A., 2020. Granular measures of agricultural land-use influence lake nitrogen and phosphorus differently at macroscales. <i>Ecological Applications.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/eap.2187"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a> 
+<li><b>Stachelek, J.</b>, Weng, W., Carey, C.C., Kemanian, A.R., Cobourn, K.M., Wagner, T., Weathers, K.C., Soranno, P.A., 2020. Granular measures of agricultural land-use influence lake nitrogen and phosphorus differently at macroscales. <i>Ecological Applications.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/eap.2187"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 <!-- <a aria-label="download link" target="_blank" href="../pdf/2020_stachelek_ecoapps.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a> -->
 
 <li>Servais, S., Kominoski, J.S., Coronado-Molina, C., Bauman, L., Davis, S.E., Gaiser, E.E., Kelly, S., Madden, C., Mazzei, V., Rudnik, D., Santamaria, F., Sklar, F.H., <b>Stachelek, J.</b>, Troxler, T.G., Wilson, B.J., 2020. Effects of saltwater pulses on soil microbial enzymes and organic matter breakdown in freshwater and brackish coastal wetlands. <i>Estuaries and Coasts.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1007/s12237-020-00708-1"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
@@ -82,7 +82,7 @@ disable_comments: true
 <li> <b>Stachelek J.</b> and Madden C.J. 2015. Application of Inverse Path Distance Weighting for high density spatial mapping of coastal water quality patterns. <i>International Journal of Geographical Information Science</i>. <a aria-label="doi link" target="_blank" href="https://doi.org/10.1080/13658816.2015.1018833"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i><span class="sr-only">Link to article</span></a>
 <!-- <a aria-label="download link" target="_blank" href="../pdf/stachmadden2015am.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a> -->
 
-<li> <b>Stachelek J.</b> and Dunton K.H. 2013. Freshwater inflow requirements for the Nueces Delta, Texas: Spartina alterniflora as an indicator of ecosystem condition. <i>Texas Water Journal</i>. 4(2), 62-73. <a aria-label="doi link" target="_blank" href="https://doi.org/10.21423/twj.v4i2.6354"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i><span class="sr-only">Link to article</span></a> 
+<li> <b>Stachelek J.</b> and Dunton K.H. 2013. Freshwater inflow requirements for the Nueces Delta, Texas: Spartina alterniflora as an indicator of ecosystem condition. <i>Texas Water Journal</i>. 4(2), 62-73. <a aria-label="doi link" target="_blank" href="https://doi.org/10.21423/twj.v4i2.6354"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i><span class="sr-only">Link to article</span></a>
 <!-- <a aria-label="download link" target="_blank" href="../pdf/StachelekDunton2013.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a> -->
 
 </ol>
@@ -104,20 +104,20 @@ disable_comments: true
 
 See [Data Science Portfolio](https://jsta.github.io/gh_cran_portfolio/)
 
-**Author**
+#### Author
 
 - `nhdR`: Tools for working with the National Hydrography Dataset
 [https://github.com/jsta/nhdR](https://github.com/jsta/nhdR)
 - `LAGOSNE`: Interface to the Lake Multi-Scaled Geospatial and Temporal Database
-[https://github.com/cont-limno/LAGOSNE](https://github.com/cont-limno/LAGOSNE) 
+[https://github.com/cont-limno/LAGOSNE](https://github.com/cont-limno/LAGOSNE)
 - `wikilake`: Scrape Lake Metadata Tables from Wikipedia
-[https://github.com/jsta/wikilake](https://github.com/jsta/wikilake) 
+[https://github.com/jsta/wikilake](https://github.com/jsta/wikilake)
 - `dbhydroR`: Everglades Hydrologic and Water Quality Data from R
 [https://github.com/ropensci/dbhydroR](https://github.com/ropensci/dbhydroR)
 - `ipdw`: Interpolation by Inverse Path Distance Weighting
 [https://github.com/jsta/ipdw](https://github.com/jsta/ipdw)
 
-**Contributor**
+#### Contributor
 
 - `rnoaa`: 'NOAA' Weather Data from R. [https://github.com/ropensci/rnoaa](https://github.com/ropensci/rnoaa)
 - `lakemorpho`: Lake Morphometry Metrics in R. [https://github.com/USEPA/lakemorpho](https://github.com/USEPA/lakemorpho)

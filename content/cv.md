@@ -104,7 +104,7 @@ disable_comments: true
 
 See [Data Science Portfolio](https://jsta.github.io/gh_cran_portfolio/)
 
-#### Author
+**Author**
 
 - `nhdR`: Tools for working with the National Hydrography Dataset
 [https://github.com/jsta/nhdR](https://github.com/jsta/nhdR)
@@ -117,7 +117,7 @@ See [Data Science Portfolio](https://jsta.github.io/gh_cran_portfolio/)
 - `ipdw`: Interpolation by Inverse Path Distance Weighting
 [https://github.com/jsta/ipdw](https://github.com/jsta/ipdw)
 
-#### Contributor
+**Contributor**
 
 - `rnoaa`: 'NOAA' Weather Data from R. [https://github.com/ropensci/rnoaa](https://github.com/ropensci/rnoaa)
 - `lakemorpho`: Lake Morphometry Metrics in R. [https://github.com/USEPA/lakemorpho](https://github.com/USEPA/lakemorpho)

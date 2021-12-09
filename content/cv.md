@@ -20,7 +20,9 @@ disable_comments: true
 
 ## Professional Experience
 
-- 2021 -- Present, Postdoctoral Research Associate, Earth System Observations, Los Alamos National Laboratory
+- 2022 -- Present, Director's Postdoctoral Fellow, Earth System Observations, Los Alamos National Laboratory
+
+- 2021 -- 2021, Postdoctoral Research Associate, Earth System Observations, Los Alamos National Laboratory
 
 - 2020 -- 2021, Postdoctoral Research Associate, Center for Limnology, University of Wisconsin-Madison
   

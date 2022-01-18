@@ -34,7 +34,9 @@ disable_comments: true
 
 <ol reversed>
 
-<li> <b>Stachelek, J.</b>, Hanly, P.J., Soranno, P.A., Accepted. Imperfect slope measurements drive overestimation in geometric cone model of lake and reservoir depth. <i>Inland Waters.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1080/20442041.2021.2006553"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
+<li> <b>Stachelek, J.</b>, Hanly, P.J., Soranno, P.A., 2022. Imperfect slope measurements drive overestimation in geometric cone model of lake and reservoir depth. <i>Inland Waters.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1080/20442041.2021.2006553"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a> <a aria-label="download link" target="_blank" href="https://github.com/cont-limno/bathymetry/blob/master/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i> <span class="sr-only">Download link</span> </a>
+
+<!-- <a aria-label="download link" target="_blank" href="https://github.com/cont-limno/bathymetry/blob/master/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i></a> -->
 
 <li>Hanson, P., Stillman, A.B., Jia, X., Karpatne, A., Dugan, H.A., Carey, C.C., <b>Stachelek, J.</b>, Ward, N.K, Zhang, Y., Read, J.S., Kumar, V., 2020. Predicting lake surface water phosphorus dynamics using process-guided machine learning. <i>Ecological Modelling.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1016/j.ecolmodel.2020.109136"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 

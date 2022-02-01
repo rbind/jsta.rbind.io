@@ -106,7 +106,7 @@ disable_comments: true
   
 ### Software package development [(https://github.com/jsta)](https://github.com/jsta)
 
-See [Data Science Portfolio](https://jsta.github.io/gh_cran_portfolio/)
+See [Products](https://jsta.rbind.io/products/) page
 
 **Author**
 

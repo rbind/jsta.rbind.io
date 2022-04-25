@@ -1,0 +1,32 @@
+---
+title: Book review - The Ministry for the Future
+author: ''
+date: '2022-04-24'
+slug: the-ministry-for-the-future
+categories: []
+tags: []
+---
+
+Some say our failure to meaningfully address climate change is due to a lack of "political will". However, [an argument](https://locusmag.com/2021/11/cory-doctorow-the-unimaginable/) I find much more compelling is that our failure is driven not by a lack of political will but by a lack of imagination. Basically, the climate crisis is so huge and all-encompassing that it can be difficult to imagine what climate success looks like and how we get there. One such vision is laid out in a recent book by Kim Stanley Robinson [The Ministry for the Future](https://www.hachettebookgroup.com/titles/kim-stanley-robinson/the-ministry-for-the-future/9780316300162/) which I will now review.
+
+The book opens with a catastrophic heat wave that almost immediately catalyzes climate action (albeit only in countries affected by the heat wave). A significant feature of both the initial climate action and the more widespread climate actions that follow is their extreme violence. Strangely, the violence is mostly offstage in the book (see [Cory Doctorow's review](https://locusmag.com/2021/11/cory-doctorow-the-unimaginable/)). The readers never meet the perpetrators (anonymous underground militias) or the victims (wealthy oil executives and the like), we only learn of how their planes or yachts are attacked by drones.
+
+The aforementioned violence sets the stage for the bulk of the book's text which is devoted to the leaders of a fictional United Nations body called the Ministry for the Future. Among other things, the book's inordinate focus on top-down global governance stands in stark contrast to the more bottom-up vision laid out in the [Climate Leviathan book](https://jsta.rbind.io/blog/climate-leviathan-a-polictical-theory-of-our-planetary-future/). The Ministry's influence on climate action is immense. They remake the global monetary system, restructure the world's land-use by initiating policies of de-growth, and violently (but covertly) punish climate polluters.
+
+I found the violence and the imagined role of the United Nations Ministry somewhat believable. However, there are some other features of the book that I found very much implausible:
+
+* Rich climate polluters are violently attacked but governments (and their intelligence agencies) are not brought to bear to protect them.
+
+* The climate crisis is essentially solved (global atmospheric carbon dioxide concentrations start to decline) within the span of the protagonists life. This is far far too quick in my estimation. A multi-generational effort would be more realistic.
+
+* The climate crisis is solved by bankers in smoke filled rooms. Where is the outright military power-struggle?
+
+* We hear of some militias fighting the Ministry's de-growth policies but realistically the number of climate doomsdayers is far far too small in the book.
+
+Although the book is a slog at times (there are A LOT of allegorical cutscenes), the book is a worthwhile read. It humanizes the (elite) people who end up saving the world and despite its improbabilities, tells a compelling story of the struggle to save the planet. To quote Cory Doctorow, "sometimes we have to tell improbable stories to imagine new possibilities."
+
+## See also:
+
+[Cory Doctorow's review](https://locusmag.com/2021/11/cory-doctorow-the-unimaginable/)
+
+[My review of Climate Leviathan](https://jsta.rbind.io/blog/climate-leviathan-a-polictical-theory-of-our-planetary-future/)

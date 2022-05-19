@@ -34,7 +34,7 @@ disable_comments: true
 
 <ol reversed>
 
-<li> Ladwig, R., Appling, A., Delany, A., Dugan, H., Gao, Q., Lottig, N., <b>Stachelek, J.</b>, Hanson, P., Accepted. Long-term Change in Metabolism Phenology in North Temperate Lakes. <i>Limnology and Oceanography.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/lno.12098"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
+<li> Ladwig, R., Appling, A., Delany, A., Dugan, H., Gao, Q., Lottig, N., <b>Stachelek, J.</b>, Hanson, P., 2022. Long-term Change in Metabolism Phenology in North Temperate Lakes. <i>Limnology and Oceanography.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/lno.12098"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> <b>Stachelek, J.</b>, Hanly, P.J., Soranno, P.A., 2022. Imperfect slope measurements drive overestimation in geometric cone model of lake and reservoir depth. <i>Inland Waters.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1080/20442041.2021.2006553"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a> <a aria-label="download link" target="_blank" href="https://github.com/cont-limno/bathymetry/blob/master/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i> <span class="sr-only">Download link</span> </a>
 

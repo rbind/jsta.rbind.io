@@ -10,7 +10,11 @@ disable_comments: true
 
 ## Jemma Stachelek
 
-![pronouns](https://img.shields.io/static/v1?label=pronouns&message=she/her&color=red&style=flat-square) [![ORCID](https://img.shields.io/static/v1?label=ORCID&message=0000-0002-5924-2464&color=green&style=flat-square&logo=orcid)](https://orcid.org/0000-0002-5924-2464) [![Google Scholar](https://img.shields.io/static/v1?label=&message=Google%20Scholar&color=gray&style=flat-square&logo=google-scholar)](https://scholar.google.com/citations?user=IkYbVz8AAAAJ)
+<p align="left">  
+  <img src=https://img.shields.io/static/v1?label=pronouns&message=she/her&color=red&style=flat-square>
+  <a href=https://orcid.org/0000-0002-5924-2464><img src=https://img.shields.io/static/v1?label=ORCID&message=0000-0002-5924-2464&color=green&style=flat-square&logo=orcid></a>
+  <a href=https://scholar.google.com/citations?user=IkYbVz8AAAAJ><img src=https://img.shields.io/static/v1?label=&message=Google%20Scholar&color=gray&style=flat-square&logo=google-scholar></a>  
+</p>
 
 ## Education
 

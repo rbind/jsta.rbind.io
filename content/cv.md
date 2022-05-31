@@ -10,6 +10,10 @@ disable_comments: true
 
 ## Jemma Stachelek
 
+![pronouns](https://img.shields.io/static/v1?label=pronouns&message=she/her&color=red&style=flat-square)
+[![ORCID](https://img.shields.io/static/v1?label=ORCID&message=0000-0002-5924-2464&color=green&style=flat-square&logo=orcid)](https://orcid.org/0000-0002-5924-2464)
+[![Google Scholar](https://img.shields.io/static/v1?label=&message=Google%20Scholar&color=gray&style=flat-square&logo=google-scholar)](https://scholar.google.com/citations?user=IkYbVz8AAAAJ)
+
 ## Education
 
 - 2016 -- 2020, Ph.D., Michigan State University
@@ -33,6 +37,8 @@ disable_comments: true
 ### Peer-Reviewed
 
 <ol reversed>
+
+<li> Schwenk, J., Zussman, T., <b>Stachelek, J.</b>, Rowland, J.C., 2022. rabpro: global watershed boundaries, river elevation profiles, and catchment statistics. <i>Journal of Open Source Software.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.xxxx/draft"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> Ladwig, R., Appling, A., Delany, A., Dugan, H., Gao, Q., Lottig, N., <b>Stachelek, J.</b>, Hanson, P., 2022. Long-term Change in Metabolism Phenology in North Temperate Lakes. <i>Limnology and Oceanography.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/lno.12098"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 

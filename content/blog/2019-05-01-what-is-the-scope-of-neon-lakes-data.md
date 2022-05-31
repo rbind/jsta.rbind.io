@@ -21,7 +21,7 @@ Before we begin, let's set up our `R` environment where the package dependencies
 
 ## Walkthrough
 
-According to the [NEON documentation](https://www.neonscience.org/field-site-subtype/lake), there are 7 NEON lake sites. We can start by mapping the location of these sites (we'll exclude `TOOK` in Alaska). We'll pull the coordinates for each site using the `geoNEON` function `def.extr.geo.os`:
+According to the [NEON documentation](https://www.neonscience.org/field-sites/about-field-sites#lakes), there are 7 NEON lake sites. We can start by mapping the location of these sites (we'll exclude `TOOK` in Alaska). We'll pull the coordinates for each site using the `geoNEON` function `def.extr.geo.os`:
 
 ```r
 neon_lakes  <- data.frame( # excluding `TOOK` in Alaska

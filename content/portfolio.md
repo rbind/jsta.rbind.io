@@ -2,7 +2,13 @@
 title: "Figure Portfolio"
 ---
 
-# Academic Figures
+## Academic Figures
+
+<a href="/images/satellite-1_1.png" data-lightbox="satellite-1_1.png"><img  class="portfolio-fig" src="/images/satellite-1_1.png"></a>
+
+<p class="caption">High versus low riparian buffer demonstration. Figure associated with <a href="https://doi.org/10.1002/eap.2187">Stachelek et al. 2020</a>.</p>
+
+<!------->
 
 <a href="/images/02_conny_metric_key_crop_small.png" data-lightbox="02_conny_metric_key_crop_small.png"><img  class="portfolio-fig" src="/images/02_conny_metric_key_crop_small.png"></a>
 

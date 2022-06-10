@@ -105,6 +105,8 @@ disable_comments: true
 
 ### Datasets
 
+- **Stachelek, J.**, L.K. Rodriguez, et al. 2021. LAGOS-US DEPTH v1.0: Data module of observed maximum and mean lake depths for a subset of lakes in the conterminous U.S. ver 1. Environmental Data Initiative [10.6073/pasta/64ddc4d04661d9aef4bd702dc5d8984f](https://doi.org/10.6073/pasta/64ddc4d04661d9aef4bd702dc5d8984f)
+- **Stachelek, J.** 2021. Bathymetry Data for 5,000 Lakes. [10.6084/M9.FIGSHARE.12722246](https://doi.org/10.6084/M9.FIGSHARE.12722246)
 - **Stachelek J.** 2019. Freshwater connectivity and stream morphology metrics for Northeast and Midwestern US lakes. [https://doi.org/10.5281/zenodo.2554212](https://doi.org/10.5281/zenodo.2554212)
 - **Stachelek J**, Ford C, Kincaid D, King K, Miller H, Nagelkirk R. 2017. The National Eutrophication Survey: lake characteristics and historical nutrient concentrations. KNB Data Repository. [http://dx.doi.org/10.5063/F10G3H3Z](http://dx.doi.org/10.5063/F10G3H3Z)
 - Madden C, **Stachelek J**, Kelly S, Blaha M. 2017. Florida Bay water quality estimated by underway flow-through measurement. KNB Data Repository. [http://dx.doi.org/10.5063/F11R6NGR](http://dx.doi.org/10.5063/F11R6NGR)

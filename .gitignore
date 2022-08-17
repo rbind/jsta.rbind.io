@@ -16,9 +16,12 @@ static/data/*.rds
 static/data/WFD*
 static/node_modules/
 static/package-lock.json
+
 static/pdf/*.gz
 static/pdf/*.log
+static/pdf/*.json
+
 static/rmarkdown-libs/
 temp
-test
+test*
 .vscode/

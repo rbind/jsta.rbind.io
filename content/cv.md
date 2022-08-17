@@ -97,6 +97,14 @@ disable_comments: true
 
 </ol>
   
+### Pre-prints (not peer-reviewed)
+
+<ol reversed>
+
+<li> <b>Stachelek J.</b>, Madden, C.J., Kelly, S.P, Blaha, M. 2022. Improved estimation of phytoplankton abundance and fine-scale water quality features via simultaneous discrete and semi-continuous surveys. <i>EarthArxiv</i>. <a aria-label="doi link" target="_blank" href="https://doi.org/10.31223/X54S8M"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
+
+</ol>
+
 <!---### In-Prep (manuscripts available upon request)
 
 - **Stachelek J.**, Madden, C.J., Kelly, S.P, Blaha, M. Fine-scale relationships between phytoplankton abundance and environmental drivers in Florida Bay, USA.

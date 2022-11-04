@@ -187,7 +187,7 @@ See [Products](https://jsta.rbind.io/products/) page
 - Reviewer (2017) _Journal of Open Source Software_, _Frontiers in Ecology and Evolution_, [ROpenSci](https://github.com/ropensci/onboarding/issues/118)
 - Reviewer (2016) _Texas Water Journal_, _Journal of Open Source Software_ (2), _Peerage of Science_, _Journal of Atmospheric and Oceanic Technology_
 - Reviewer (2015) _Ecological Modelling_
-- NEON spatio-temporal hackathon (2015) - developed tutorials and assessment instruments to teach fundamental big data skills needed to work efficiently with large spatio-temporal data using open tools, such as R and Python. [link](http://www.neoninc.org/updates-events/update/nsf-biocenters-unite-close-scientific-data-skills-gap-focus-phenology)--->
+- NEON spatio-temporal hackathon (2015) - developed tutorials and assessment instruments to teach fundamental big data skills needed to work efficiently with large spatio-temporal data using open tools, such as R and Python. [link](https://www.neonscience.org/impact/observatory-blog/nsf-biocenters-unite-close-scientific-data-skills-gap-focus-phenology)--->
 
 ## Outreach Activity  
 

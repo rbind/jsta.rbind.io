@@ -55,6 +55,10 @@ rssLimit = 30
     alt = "Homepage link"
     
     [params.social]
-    twitter = "__jsta"
+    mastodon = "mas.to/@jsta"
     github = "jsta"
     
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

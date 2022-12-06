@@ -5,7 +5,7 @@ date: '2016-07-14'
 
 Many (most?) people involved in vector geospatial data analysis work exlusively with shapefiles. However, the [shapefile format](https://en.wikipedia.org/wiki/Shapefile) has a number of drawbacks including the fact that spatial attributes, metadata, and projection information are stored in seperate files. For instance, it can take as much as [45 lines of code](https://github.com/jhollist/miscPackage/blob/master/R/download_shp.R) to ensure a complete "shapefile" download.
 
-In a post to the [R-Sig-Geo listserv](https://stat.ethz.ch/pipermail/r-sig-geo/) (excerpted below) Barry Rowlingson mentions the [GeoPackage format](https://en.wikipedia.org/wiki/GeoPackage) which is an interesting alternative to shapefiles. 
+In a post to the [R-Sig-Geo listserv](https://stat.ethz.ch/mailman/listinfo/R-SIG-Geo/) (excerpted below) Barry Rowlingson mentions the [GeoPackage format](https://en.wikipedia.org/wiki/GeoPackage) which is an interesting alternative to shapefiles. 
 
 
 ```

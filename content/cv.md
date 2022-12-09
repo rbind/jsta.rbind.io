@@ -38,7 +38,7 @@ disable_comments: true
 
 <ol reversed>
 
-<li> <b>Stachelek, J.</b>, Avendaño, S., Schwenk, J. <i>Accepted</i>. Geographically aware estimates of remotely sensed water properties for Chesapeake Bay. <i>Journal of Applied Remote Sensing</i>
+<li> <b>Stachelek, J.</b>, Avendaño, S., Schwenk, J. <i>Accepted</i>. Geographically aware estimates of remotely sensed water properties for Chesapeake Bay. <i>Journal of Applied Remote Sensing.</i>
 
 <li> Swedberg, K., Boyle, K.J., <b>Stachelek, J.</b>, Ward, N.K., Weng W., Cobourn, K.M. 2022. Examining Implicit Price Variation for Lake Water Quality. <i>Water Economics and Policy.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1142/S2382624X22400057"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 

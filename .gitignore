@@ -6,7 +6,8 @@ cv.html
 *.fls
 *.out
 privatekey.json
-public
+/public/
+/resources/
 __pycache__/
 .RData
 .Rhistory

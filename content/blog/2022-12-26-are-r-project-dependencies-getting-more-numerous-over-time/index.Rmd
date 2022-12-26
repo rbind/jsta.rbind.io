@@ -9,11 +9,11 @@ tags: []
 
 > TLDR; I find some (minor) evidence that dependencies of R projects have become more numerous over time.
 
-I have a theory that software projects in general and R projects in particular are getting more complex over time. This has several consequences as you're well aware if you've tried for instance `install.packages("somepackage")` and seen the dependency installs fly by. The consequence I'm concerned with is the possibility that increasing install-complexity is a de-motivating factor in implementing reproducible workflows.
+I have a theory that software projects in general and R projects in particular are getting more complex over time. This has several consequences as you're well aware if you've tried for instance `install.packages("somepackage")` and seen the dependency installs fly by. **The consequence I'm concerned with is the possibility that increasing install-complexity is a de-motivating factor in implementing reproducible workflows.** As the number of dependencies increases, the more complex the task becomes of wrangling and tracking these for sharing and reproducibility purposes.
 
-As a first attempt to investigate the potential for increasing install complexity over time, I investigated the [data archive](https://github.com/openjournals/joss-analytics) of publications in the Journal of Open Source Software (JOSS).
+As a first attempt to investigate the potential for increasing install complexity over time, I analyzed the [data archive](https://github.com/openjournals/joss-analytics) of publications in the Journal of Open Source Software (JOSS).
 
-I start by downloading the JOSS analytics archive available from the [joss-analytics repo](https://github.com/openjournals/joss-analytics/blob/gh-pages/joss_submission_analytics.rds).
+I start by downloading this archive (available from the [joss-analytics repo](https://github.com/openjournals/joss-analytics/blob/gh-pages/joss_submission_analytics.rds)):
 
 ```{R, load packages, message=FALSE, warning=FALSE, results="hide"}
 library(gh)
@@ -104,3 +104,13 @@ ggplot(res_dt, aes(published.date, n_dep)) +
 ```
 
 I find some evidence (albeit minor) for an increasing number of dependencies through time! 
+
+---
+
+Some caveats:
+
+1. JOSS authors are probably more experienced than a random analyst. Would this make dependencies more numerous? 
+
+2. Related to 1, JOSS submissions are software "products" not analysis products. Maybe the trends would be different for analysis products? I could see in the bad old days people using 4-5 packages for creating a simple plot whereas nowadays maybe more people are just using `ggplot2`?
+
+3. This analysis was limited to JOSS submissions tagged as `R`. Are there cultural reasons particular to the R community that would cause/influence this trend?

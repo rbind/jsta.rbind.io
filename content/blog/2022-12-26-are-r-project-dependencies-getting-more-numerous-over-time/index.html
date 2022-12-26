@@ -1,0 +1,83 @@
+---
+title: Install complexity as a de-motivator for reproducible workflows
+author: 'Jemma Stachelek'
+date: '2022-12-26'
+slug: are-r-project-dependencies-getting-more-numerous-over-time
+categories: []
+tags: []
+---
+
+
+
+<p>I have a theory that software projects in general and R projects in particular are getting more complex over time. This has several consequences as you’re well aware if you’ve tried for instance <code>install.packages("somepackage")</code> and seen the dependency installs fly by. The consequence I’m concerned with is the possibility that increasing install-complexity is de-motivating factor in implementing reproducible workflows.</p>
+<p>As a first attempt to investigate the potential for increasing install complexity over time, I investigated the <a href="https://github.com/openjournals/joss-analytics">data archive</a> of publications in the Journal of Open Source Software (JOSS).</p>
+<p>I start by downloading the JOSS analytics archive available from the <a href="https://github.com/openjournals/joss-analytics/blob/gh-pages/joss_submission_analytics.rds">joss-analytics repo</a>.</p>
+<pre class="r"><code>library(gh)
+library(desc)
+library(ggplot2)
+suppressMessages(library(dplyr))</code></pre>
+<pre class="r"><code>joss_rds &lt;- &quot;data/joss_R.rds&quot;
+dir.create(&quot;data&quot;, showWarnings = FALSE)
+# unlink(joss_rds)
+if (!file.exists(joss_rds)) {
+  papers &lt;- readRDS(gzcon(url(
+    &quot;https://github.com/openjournals/joss-analytics/blob/gh-pages/joss_submission_analytics.rds?raw=true&quot;)))  
+  dt &lt;- dplyr::filter(papers, repo_language == &quot;R&quot;)  
+  saveRDS(dt, &quot;data/joss_R.rds&quot;)
+}
+dt &lt;- readRDS(joss_rds)</code></pre>
+<p>Then I use the <code>repo_url</code> field in the JOSS archive to search for the <code>DESCRIPTION</code> files associated with submissions (and download them).</p>
+<pre class="r"><code>get_desc &lt;- function(i, dt, path = &quot;DESCRIPTION&quot;) {
+    # print(i)
+    out_path &lt;- paste0(&quot;data/&quot;, &quot;DESCRIPTION&quot;, &quot;_&quot;, as.character(i))
+    if(!file.exists(out_path)) {
+      tryCatch({
+        tryCatch({
+          download.file(paste0(dt$repo_url[i], &quot;/raw/master/DESCRIPTION&quot;), path)
+          Sys.sleep(runif(1, max = 3))
+          file.copy(path, out_path)
+          Sys.sleep(runif(1, 2, 5))
+          }, error = function(e) {
+              download.file(paste0(dt$repo_url[i], &quot;/raw/main/DESCRIPTION&quot;), path)
+              Sys.sleep(runif(1, max = 3))
+              file.copy(path, out_path)
+              Sys.sleep(runif(1, 2, 5))
+          })
+        }, error = function(e) {
+          print(e)
+      })
+    }
+}
+
+lapply(seq_len(nrow(dt)), function(i) get_desc(i, dt))</code></pre>
+<p>Next, I use the <code>get_deps</code> functionality of the <code>desc</code> R package to count the number of dependencies.</p>
+<pre class="r"><code>get_deps &lt;- function(i) {
+    # print(i)
+    path &lt;- paste0(&quot;data/&quot;, &quot;DESCRIPTION&quot;, &quot;_&quot;, as.character(i))
+    if(!file.exists(path)) {
+      return(i)
+    }
+    d &lt;- desc::desc(file = path)
+    deps &lt;- d$get_deps()
+    deps$pkg_name &lt;- strsplit(dt$api_title[i], &quot;\\:&quot;)[[1]][1]
+    deps &lt;- dplyr::filter(deps, !grepl(&quot;R&quot;, package))
+    deps$i &lt;- i
+    deps
+}
+deps &lt;- lapply(seq_len(nrow(dt)), function(i) get_deps(i))</code></pre>
+<p>Finally, I join the dependency counts with the original archive data to get the dates of publication for each entry.</p>
+<pre class="r"><code>n_deps &lt;- unlist(lapply(deps, function(x) ifelse(is.null(nrow(x)), NA, nrow(x))))
+pkg_names &lt;- unlist(lapply(deps, function(x) substr(x[&quot;pkg_name&quot;][[1]][1], 0, 17)))
+res &lt;- data.frame(pkg_name = pkg_names, n_dep = n_deps)
+res &lt;- res[seq_len(max(which(!is.na(res[&quot;n_dep&quot;])))), ]
+res_dt &lt;- cbind(res, dt[seq_len(nrow(res)),])</code></pre>
+<pre class="r"><code>ggplot(res_dt, aes(published.date, n_dep)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;, se = TRUE) +
+  ylim(0, 50) +
+  labs(x = &quot;&quot;, y = &quot;# of listed dependencies&quot;) +
+  ggtitle(paste0(&quot;n = &quot;, nrow(res_dt))) +
+  theme_classic() +
+  coord_fixed(28)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/n_deps-1.png" width="672" /></p>
+<p>I find some evidence (albeit minor) for an increasing number of dependencies through time!</p>

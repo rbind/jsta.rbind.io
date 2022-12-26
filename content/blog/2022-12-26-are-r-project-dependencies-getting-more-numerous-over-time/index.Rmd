@@ -1,5 +1,5 @@
 ---
-title: Install complexity as a de-motivator for reproducible workflows
+title: Install complexity as a de-motivator for reproducibility
 author: 'Jemma Stachelek'
 date: '2022-12-26'
 slug: are-r-project-dependencies-getting-more-numerous-over-time
@@ -7,7 +7,9 @@ categories: []
 tags: []
 ---
 
-I have a theory that software projects in general and R projects in particular are getting more complex over time. This has several consequences as you're well aware if you've tried for instance `install.packages("somepackage")` and seen the dependency installs fly by. The consequence I'm concerned with is the possibility that increasing install-complexity is de-motivating factor in implementing reproducible workflows.
+> TLDR; I find some (minor) evidence that dependencies of R projects have become more numerous over time.
+
+I have a theory that software projects in general and R projects in particular are getting more complex over time. This has several consequences as you're well aware if you've tried for instance `install.packages("somepackage")` and seen the dependency installs fly by. The consequence I'm concerned with is the possibility that increasing install-complexity is a de-motivating factor in implementing reproducible workflows.
 
 As a first attempt to investigate the potential for increasing install complexity over time, I investigated the [data archive](https://github.com/openjournals/joss-analytics) of publications in the Journal of Open Source Software (JOSS).
 

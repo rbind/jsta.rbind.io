@@ -25,3 +25,5 @@ static/rmarkdown-libs/
 temp
 test*
 .vscode/
+
+/.quarto/

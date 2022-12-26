@@ -38,6 +38,8 @@ disable_comments: true
 
 <ol reversed>
 
+<li> <b>Stachelek, J.</b>, Avendaño, S., Schwenk, J. <i>Accepted</i>. Geographically aware estimates of remotely sensed water properties for Chesapeake Bay. <i>Journal of Applied Remote Sensing.</i> <a aria-label="download link" target="_blank" href="https://github.com/DOE-ICoM/geowq-chesapeake/blob/master/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i> <span class="sr-only">Download link</span> </a>
+
 <li> Swedberg, K., Boyle, K.J., <b>Stachelek, J.</b>, Ward, N.K., Weng W., Cobourn, K.M. 2022. Examining Implicit Price Variation for Lake Water Quality. <i>Water Economics and Policy.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1142/S2382624X22400057"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> Schwenk, J., Zussman, T., <b>Stachelek, J.</b>, Rowland, J.C., 2022. rabpro: global watershed boundaries, river elevation profiles, and catchment statistics. <i>Journal of Open Source Software.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.21105/joss.04237"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>

@@ -84,10 +84,15 @@ res_dt &lt;- cbind(res, dt[seq_len(nrow(res)),])</code></pre>
   coord_fixed(28)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/n_deps-1.png" width="672" /></p>
 <p>I find some evidence (albeit minor) for an increasing number of dependencies through time!</p>
-<hr />
-<p>Some caveats:</p>
+<div id="some-caveats" class="section level2">
+<h2>Some caveats:</h2>
 <ol style="list-style-type: decimal">
 <li><p>JOSS authors are probably more experienced than a random analyst. Would this make dependencies more numerous?</p></li>
 <li><p>Related to 1, JOSS submissions are software “products” not analysis products. Maybe the trends would be different for analysis products? I could see in the bad old days people using 4-5 packages for creating a simple plot whereas nowadays maybe more people are just using <code>ggplot2</code>?</p></li>
 <li><p>This analysis was limited to JOSS submissions tagged as <code>R</code>. Are there cultural reasons particular to the R community that would cause/influence this trend?</p></li>
 </ol>
+</div>
+<div id="see-also" class="section level2">
+<h2>See also:</h2>
+<p><a href="https://www.theoj.org/joss-analytics/joss-submission-analytics.html" class="uri">https://www.theoj.org/joss-analytics/joss-submission-analytics.html</a></p>
+</div>

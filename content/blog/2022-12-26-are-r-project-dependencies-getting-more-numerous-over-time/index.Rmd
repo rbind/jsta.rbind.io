@@ -105,12 +105,16 @@ ggplot(res_dt, aes(published.date, n_dep)) +
 
 I find some evidence (albeit minor) for an increasing number of dependencies through time! 
 
----
-
-Some caveats:
+## Some caveats:
 
 1. JOSS authors are probably more experienced than a random analyst. Would this make dependencies more numerous? 
 
 2. Related to 1, JOSS submissions are software "products" not analysis products. Maybe the trends would be different for analysis products? I could see in the bad old days people using 4-5 packages for creating a simple plot whereas nowadays maybe more people are just using `ggplot2`?
 
 3. This analysis was limited to JOSS submissions tagged as `R`. Are there cultural reasons particular to the R community that would cause/influence this trend?
+
+## See also:
+
+https://www.theoj.org/joss-analytics/joss-submission-analytics.html
+
+

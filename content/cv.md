@@ -38,7 +38,7 @@ disable_comments: true
 
 <ol reversed>
 
-<li> <b>Stachelek, J.</b>, Avendaño, S., Schwenk, J. 2022. Geographically aware estimates of remotely sensed water properties for Chesapeake Bay. <i>Journal of Applied Remote Sensing.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1117/1.JRS.16.044528"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a> <a aria-label="download link" target="_blank" href="https://github.com/DOE-ICoM/geowq-chesapeake/blob/master/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i> <span class="sr-only">Download link</span> </a>
+<li> <b>Stachelek, J.</b>, Avendaño, S., Schwenk, J. 2022. Geographically aware estimates of remotely sensed water properties for Chesapeake Bay. <i>Journal of Applied Remote Sensing.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1117/1.JRS.16.044528"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a> <a aria-label="download link" target="_blank" href="https://github.com/DOE-ICoM/geowq-chesapeake/blob/main/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i> <span class="sr-only">Download link</span> </a>
 
 <li> Swedberg, K., Boyle, K.J., <b>Stachelek, J.</b>, Ward, N.K., Weng W., Cobourn, K.M. 2022. Examining Implicit Price Variation for Lake Water Quality. <i>Water Economics and Policy.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1142/S2382624X22400057"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 

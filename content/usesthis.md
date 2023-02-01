@@ -44,6 +44,4 @@ title: "Software I Use"
 
 [KeepassX](https://www.keepassx.org/) - Encrypted password manager
 
-[Evolution](https://wiki.gnome.org/Apps/Evolution) - E-mail program with easy custom filters
-
 [rsync](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps) - File backup

@@ -20,4 +20,4 @@ jobs:
     - name: Checks
       run: |        
         gem install awesome_bot        
-        awesome_bot --allow-redirect --allow-dupe --allow 503 --set-timeout 200 --allow-ssl --white-list "sciencebase.gov","lanl.gov" static/pdf/cv.tex content/*.md content/blog/*.md
+        awesome_bot --allow-redirect --allow-dupe --allow 503 --set-timeout 200 --allow-ssl --white-list "sciencebase.gov","lanl.gov","npr.org" static/pdf/cv.tex content/*.md content/blog/*.md

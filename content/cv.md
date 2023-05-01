@@ -132,14 +132,12 @@ See [Products](https://jsta.rbind.io/products/) page
 
 **Author**
 
+- `rabpro`: Package to delineate watershed basins and compute attribute statistics using Google Earth Engine
+[https://github.com/VeinsOfTheEarth/rabpro](https://github.com/VeinsOfTheEarth/rabpro)
 - `nhdR`: Tools for working with the National Hydrography Dataset
 [https://github.com/jsta/nhdR](https://github.com/jsta/nhdR)
 - `LAGOSNE`: Interface to the Lake Multi-Scaled Geospatial and Temporal Database
 [https://github.com/cont-limno/LAGOSNE](https://github.com/cont-limno/LAGOSNE)
-- `wikilake`: Scrape Lake Metadata Tables from Wikipedia
-[https://github.com/jsta/wikilake](https://github.com/jsta/wikilake)
-- `dbhydroR`: Everglades Hydrologic and Water Quality Data from R
-[https://github.com/ropensci/dbhydroR](https://github.com/ropensci/dbhydroR)
 - `ipdw`: Interpolation by Inverse Path Distance Weighting
 [https://github.com/jsta/ipdw](https://github.com/jsta/ipdw)
 

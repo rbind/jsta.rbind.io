@@ -195,7 +195,7 @@ See [Products](https://jsta.rbind.io/products/) page
 
 ## Outreach Activity  
 
-- [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present) [Contributor](https://en.wikipedia.org/wiki/Special:Contributions/Jst4)
+- [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present)
 
 <!--- Everglades Day (2016) Guided tours of science activities at the Loxahatchee Impoundment Landscape Assessment. 17th Annual Everglades Day, Loxahatchee National Wildlife Refuge.
 - National Public Radio (2016) Rising Seas Push Too Much Salt Into the Florida Everglades. [link](http://www.npr.org/2016/05/25/477014085/rising-seas-push-too-much-salt-into-the-florida-everglades)

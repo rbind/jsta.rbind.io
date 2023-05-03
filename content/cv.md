@@ -38,6 +38,8 @@ disable_comments: true
 
 <ol reversed>
 
+<li> Weng, W., Coburn, K.M., Kemanian, A.R., Boyle, K.J., Yuning, S., <b>Stachelek, J.</b>, White, C. <i>Accepted</i>. Quantifying Co-Benefits of Water Quality Policies: An Integrated Assessment Model of Land and Nitrogen Management. <i>American Journal of Agricultural Economics</i>.
+
 <li> <b>Stachelek, J.</b>, 2023. Quantifying uncertainty in Pareto estimates of global lake area. <i>Limnology and Oceanography: Methods.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/LOM3.10536"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> <b>Stachelek, J.</b>, Avendaño, S., Schwenk, J. 2022. Geographically aware estimates of remotely sensed water properties for Chesapeake Bay. <i>Journal of Applied Remote Sensing.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1117/1.JRS.16.044528"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a> <a aria-label="download link" target="_blank" href="https://github.com/DOE-ICoM/geowq-chesapeake/blob/main/manuscript/manuscript.pdf"><i aria-hidden="true" class="fa fa-download" title="download link"></i> <span class="sr-only">Download link</span> </a>

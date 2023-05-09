@@ -145,6 +145,7 @@ See [Products](https://jsta.rbind.io/products/) page
 
 **Contributor**
 
+- `RivGraph`: Tools for topological analysis of fluvial networks from binary masks. [https://github.com/VeinsOfTheEarth/RivGraph](https://github.com/VeinsOfTheEarth/RivGraph)
 - `rnoaa`: 'NOAA' Weather Data from R. [https://github.com/ropensci/rnoaa](https://github.com/ropensci/rnoaa)
 - `lakemorpho`: Lake Morphometry Metrics in R. [https://github.com/USEPA/lakemorpho](https://github.com/USEPA/lakemorpho)
 

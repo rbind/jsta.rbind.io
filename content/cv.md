@@ -105,9 +105,11 @@ disable_comments: true
 
 </ol>
   
-### Pre-prints (not peer-reviewed)
+### Pre-prints and whitepapers (not peer-reviewed)
 
 <ol reversed>
+
+<li> <b>Stachelek J.</b>, Regier, P., Schwenk, J., Ward, N. 2023. Uncertainty in global time-resolved methane emissions from aquatic waterbodies. <i>AI4CH4</i>. <a aria-label="doi link" target="_blank" href="https://www.ai4esp.org/files/AI4CH4/whitepapers/AI4CH406_Jemma_Stachelek.pdf"><i aria-hidden="true" class="ai ai-doi" title="pdf link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> <b>Stachelek J.</b>, Madden, C.J., Kelly, S.P, Blaha, M. 2022. Improved estimation of phytoplankton abundance and fine-scale water quality features via simultaneous discrete and semi-continuous surveys. <i>EarthArxiv</i>. <a aria-label="doi link" target="_blank" href="https://doi.org/10.31223/X54S8M"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
@@ -115,7 +117,6 @@ disable_comments: true
 
 <!---### In-Prep (manuscripts available upon request)
 
-- **Stachelek J.**, Madden, C.J., Kelly, S.P, Blaha, M. Fine-scale relationships between phytoplankton abundance and environmental drivers in Florida Bay, USA.
 - Park, S.R., **Stachelek, J.**, Dunton K.H. Photosynthesis and drought resilience in three emergent vascular plant species common to marshes of the western Gulf of Mexico.--->
 
 ### Datasets

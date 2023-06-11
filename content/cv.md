@@ -38,7 +38,7 @@ disable_comments: true
 
 <ol reversed>
 
-<li> Bennett, K., Schwenk, J., Bachand, C., Gasarch, E., <b>Stachelek, J.</b>, Bolton W.R., Rowland, J.C., <i>Accepted</i>. Recent streamflow trends across permafrost basins of North America. <i>Frontiers in Water</i>.
+<li> Bennett, K., Schwenk, J., Bachand, C., Gasarch, E., <b>Stachelek, J.</b>, Bolton W.R., Rowland, J.C., <i>Accepted</i>. Recent streamflow trends across permafrost basins of North America. <i>Frontiers in Water.</i><a aria-label="doi link" target="_blank" href="https://doi.org/10.3389/frwa.2023.1099660"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> Weng, W., Coburn, K.M., Kemanian, A.R., Boyle, K.J., Yuning, S., <b>Stachelek, J.</b>, White, C. <i>Accepted</i>. Quantifying Co-Benefits of Water Quality Policies: An Integrated Assessment Model of Land and Nitrogen Management. <i>American Journal of Agricultural Economics</i>.
 

@@ -197,9 +197,9 @@ See [Products](https://jsta.rbind.io/products/) page
 - Reviewer (2015) _Ecological Modelling_
 - NEON spatio-temporal hackathon (2015) - developed tutorials and assessment instruments to teach fundamental big data skills needed to work efficiently with large spatio-temporal data using open tools, such as R and Python. [link](https://www.neonscience.org/impact/observatory-blog/nsf-biocenters-unite-close-scientific-data-skills-gap-focus-phenology)--->
 
-## Outreach Activity  
+<!-- ## Outreach Activity  
 
-- [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present)
+- [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present) -->
 
 <!--- Everglades Day (2016) Guided tours of science activities at the Loxahatchee Impoundment Landscape Assessment. 17th Annual Everglades Day, Loxahatchee National Wildlife Refuge.
 - National Public Radio (2016) Rising Seas Push Too Much Salt Into the Florida Everglades. [link](http://www.npr.org/2016/05/25/477014085/rising-seas-push-too-much-salt-into-the-florida-everglades)

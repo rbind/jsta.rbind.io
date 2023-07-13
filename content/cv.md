@@ -38,9 +38,9 @@ disable_comments: true
 
 <ol reversed>
 
-<li> Bennett, K., Schwenk, J., Bachand, C., Gasarch, E., <b>Stachelek, J.</b>, Bolton W.R., Rowland, J.C., <i>Accepted</i>. Recent streamflow trends across permafrost basins of North America. <i>Frontiers in Water.</i><a aria-label="doi link" target="_blank" href="https://doi.org/10.3389/frwa.2023.1099660"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
-
 <li> Weng, W., Coburn, K.M., Kemanian, A.R., Boyle, K.J., Yuning, S., <b>Stachelek, J.</b>, White, C. <i>Accepted</i>. Quantifying Co-Benefits of Water Quality Policies: An Integrated Assessment Model of Land and Nitrogen Management. <i>American Journal of Agricultural Economics</i>.
+
+<li> Bennett, K., Schwenk, J., Bachand, C., Gasarch, E., <b>Stachelek, J.</b>, Bolton W.R., Rowland, J.C., 2023. Recent streamflow trends across permafrost basins of North America. <i>Frontiers in Water.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.3389/frwa.2023.1099660"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
 <li> <b>Stachelek, J.</b>, 2023. Quantifying uncertainty in Pareto estimates of global lake area. <i>Limnology and Oceanography: Methods.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1002/LOM3.10536"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 
@@ -197,9 +197,9 @@ See [Products](https://jsta.rbind.io/products/) page
 - Reviewer (2015) _Ecological Modelling_
 - NEON spatio-temporal hackathon (2015) - developed tutorials and assessment instruments to teach fundamental big data skills needed to work efficiently with large spatio-temporal data using open tools, such as R and Python. [link](https://www.neonscience.org/impact/observatory-blog/nsf-biocenters-unite-close-scientific-data-skills-gap-focus-phenology)--->
 
-## Outreach Activity  
+<!-- ## Outreach Activity  
 
-- [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present)
+- [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present) -->
 
 <!--- Everglades Day (2016) Guided tours of science activities at the Loxahatchee Impoundment Landscape Assessment. 17th Annual Everglades Day, Loxahatchee National Wildlife Refuge.
 - National Public Radio (2016) Rising Seas Push Too Much Salt Into the Florida Everglades. [link](http://www.npr.org/2016/05/25/477014085/rising-seas-push-too-much-salt-into-the-florida-everglades)

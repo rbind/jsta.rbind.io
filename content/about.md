@@ -4,4 +4,4 @@ title: "About"
 
 ## Jemma Stachelek (Stack - ah - leck)
 
-I am a researcher in the [Earth System Observations](https://organizations.lanl.gov/cels/ees-division/earth-system-observations/) group at [Los Alamos National Laboratory](https://lanl.gov).
+I am a Scientist in the [High Performance Computing Division](https://www.lanl.gov/org/ddste/aldsc/hpc/index.php) at [Los Alamos National Laboratory](https://lanl.gov).

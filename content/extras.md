@@ -2,7 +2,7 @@
 title: "Extras"
 ---
 
-+ [limnopapers](https://feedpapers.github.io/limnopapers/) - Automated feed of newly published articles in Limnology also posting to Twitter and Mastodon
++ [limnopapers](https://feedpapers.github.io/limnopapers/) - Automated feed of newly published articles in Limnology also posting to Mastodon
 
 + [Figure Portfolio](https://jsta.rbind.io/portfolio) - Collection of my favorite self-produced figures
 

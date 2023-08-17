@@ -123,6 +123,7 @@ disable_comments: true
 
 ### Datasets
 
+- Schwenk, J. **Stachelek, J.**, Avendaño, S. Salinity, temperature, and turbidity from 2000-2021 in the Chesapeake Bay. [https://doi.org/10.6084/m9.figshare.21578898.v1](https://doi.org/10.6084/m9.figshare.21578898.v1)
 - **Stachelek, J.**, L.K. Rodriguez, et al. 2021. LAGOS-US DEPTH v1.0: Data module of observed maximum and mean lake depths for a subset of lakes in the conterminous U.S. ver 1. Environmental Data Initiative [10.6073/pasta/64ddc4d04661d9aef4bd702dc5d8984f](https://doi.org/10.6073/pasta/64ddc4d04661d9aef4bd702dc5d8984f)
 - **Stachelek, J.** 2021. Bathymetry Data for 5,000 Lakes. [10.6084/M9.FIGSHARE.12722246](https://doi.org/10.6084/M9.FIGSHARE.12722246)
 - **Stachelek J.** 2019. Freshwater connectivity and stream morphology metrics for Northeast and Midwestern US lakes. [https://doi.org/10.5281/zenodo.2554212](https://doi.org/10.5281/zenodo.2554212)

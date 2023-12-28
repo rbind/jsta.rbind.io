@@ -1,0 +1,36 @@
+---
+title: university state prestige
+author: ''
+date: '2023-12-26'
+slug: university-state-prestige
+categories: []
+tags: []
+---
+
+Why are University of [state] usually more prestigious than [state] State University? 
+
+https://www.reddit.com/r/ApplyingToCollege/comments/b627b0/why_are_university_of_state_usually_more/
+
+Why do "University of [state]" schools tend to be more prestigious than " [state] State" schools?
+
+https://www.quora.com/Why-do-University-of-state-schools-tend-to-be-more-prestigious-than-state-State-schools?share=1
+
+# ---
+
+# Are "University of [state]" schools more prestigious than "[state] State" schools?
+
+A: There's a general idea that University of Xs are more prestigious than X State Universities. One potential way to measure this is undergraduate acceptance rate. I don't like that approach for several reasons. First, there's a lot of strange things that go on with undergraduate admissions such as legacy admissions, etc. Also,  
+
+B: First of all, is this true? across the board? What is the magnitude of the prestige differences? 
+There's a lot of strange things that go on with this process with legacy admissions and so on. 
+
+T: I wanted to look at an alternative, professor hirings as a measure of these prestige differences. 
+
+![](/images/lollipop_natural.png)
+
+![](/images/lollipop_academia.png)
+
+hard-code nyu vs suny
+why isn't penn state upenn there?
+
+I thnink the uohio outlier made me suscpicious of the dominant paradigm along with my knowledge of the other MSUs but not corresonding UMs

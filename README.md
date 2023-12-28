@@ -12,6 +12,10 @@ blogdown::new_post("This is a post title", ext = ".Rmd", subdir = "blog")
 
 Commit Rmd + html at `content/blog/*` as well as image files at `static/blog/title`
 
+Insert external images at top level `static/images`:
+
+![https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/](https://blogdown-demo.rbind.io/2017/10/06/adding-figures-and-other-images-to-posts/)
+
 Preview/build post with:
 
 ```r

@@ -1,5 +1,5 @@
 ---
-title: university state prestige
+title: Are University of X(s) more prestigious than X State(s)?
 author: ''
 date: '2023-12-26'
 slug: university-state-prestige
@@ -7,30 +7,38 @@ categories: []
 tags: []
 ---
 
-Why are University of [state] usually more prestigious than [state] State University? 
+> TLDR; Yes, prestige differences are widespread AND they extend beyond undergraduate admissions to faculty hiring. I didn't find an appreciable difference between Academia as a whole and the specific subfields to which I'm affiliated.
 
-https://www.reddit.com/r/ApplyingToCollege/comments/b627b0/why_are_university_of_state_usually_more/
+There's a general idea out there that University of Xs are more prestigious than X State Universities. This is probably true, but _how much_ is it true? Are there places (i.e. states) where it is not true? One potential way to measure this is undergraduate acceptance rate. This seems to be common in popular discourse on platforms like [Reddit](https://www.reddit.com/r/ApplyingToCollege/comments/b627b0/why_are_university_of_state_usually_more/) and [Quora](https://www.quora.com/Why-do-University-of-state-schools-tend-to-be-more-prestigious-than-state-State-schools?share=1).
 
-Why do "University of [state]" schools tend to be more prestigious than " [state] State" schools?
+I don't like that approach for several reasons. First, there's a lot of strange things that go on with undergraduate admissions such as legacy admissions (_it's been in the news_). Second, it kind of shuts down the conversation. After all, undergraduate admissions are not the only aspect of prestige. Finally, I'm not sure that the general prestige hierarchy is true across the board. There are certainly differences in the magnitude of prestige differences across state institutions.
 
-https://www.quora.com/Why-do-University-of-state-schools-tend-to-be-more-prestigious-than-state-State-schools?share=1
+When I came across this [rich dataset](https://github.com/LarremoreLab/us-faculty-hiring-networks/tree/main) quantifying prestige differences in faculty hiring, it got me thinking that it'd be a fun way to test my theories more comprehensively; Not to mention my personal interest as someone who has been somewhat recently applying to professor jobs.
 
-# ---
+### What I did
 
-# Are "University of [state]" schools more prestigious than "[state] State" schools?
+> my source code is [here](https://github.com/jsta/prestige_state-v-uni)
 
-A: There's a general idea that University of Xs are more prestigious than X State Universities. One potential way to measure this is undergraduate acceptance rate. I don't like that approach for several reasons. First, there's a lot of strange things that go on with undergraduate admissions such as legacy admissions, etc. Also,  
+1. Download the `us-faculty-hiring-networks` [dataset](https://github.com/LarremoreLab/us-faculty-hiring-networks/tree/main) associated with [this paper](https://doi.org/10.1038/s41586-022-05222-x).
 
-B: First of all, is this true? across the board? What is the magnitude of the prestige differences? 
-There's a lot of strange things that go on with this process with legacy admissions and so on. 
+2. Extract pairs of Universities that match the University of X and X State paradigm. Manually code some notable exceptions (e.g. University of Texas was coded in the dataset as UT Austin). I ignored California because their schools are too numerous and would break my plotting scheme.
 
-T: I wanted to look at an alternative, professor hirings as a measure of these prestige differences. 
+3. Compare the "Ordinal Prestige Rank" between in-state institutions and among fields. I had initially intended to compare more fields but many of the ones of interest to me like `Ecology` were too few in the dataset to make a nice visualization.
+
+### The Results
+
+> University of Xs are filled circles, X States are open circles
 
 ![](/images/lollipop_natural.png)
 
 ![](/images/lollipop_academia.png)
 
-hard-code nyu vs suny
-why isn't penn state upenn there?
+Well, not too much surprising I guess. University of Xs are far and away more prestigious (in the faculty hiring department) than X States. As an MSU graduate, I'm happy to see all of the MSUs make an appearance.
 
-I thnink the uohio outlier made me suscpicious of the dominant paradigm along with my knowledge of the other MSUs but not corresonding UMs
+Some things I wouldn't have guessed include:
+
+* Florida State being more prestigious than UF
+
+* Both Iowa schools ranking so high overall.
+
+* Iowa State being the most prestigious X state school!

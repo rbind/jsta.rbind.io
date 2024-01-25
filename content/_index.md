@@ -9,6 +9,6 @@ disable_highlight: true
     <img src="/images/Picture_021.jpg" alt="Ocean scene">
 </div>
 
-<center><strong> Aquatic Earth Science | Geocomputation | Open Science </strong></center>
+<center><strong> Scientific Computing | Aquatic Earth Science | Open Science </strong></center>
 
 <a rel="me" href="https://mas.to/@jsta"></a>

@@ -38,7 +38,7 @@ disable_comments: true
 
 <ol reversed>
 
-<li> Wander, H.L., Farruggia, M.J., La Fuente, S., Korver, M.C., Chapina, R.J., Robinson, J., Bah, A., Munthali, E., Ghosh, R., <b>Stachelek, J.</b>, Khandelwal, A., Hanson, P.C., Weathers, K.C. <i>Accepted</i> Using knowledge-guided machine learning to assess patterns of areal change in waterbodies across the contiguous U.S. <i>Environmental Science and Technology</i>.
+<li> Wander, H.L., Farruggia, M.J., La Fuente, S., Korver, M.C., Chapina, R.J., Robinson, J., Bah, A., Munthali, E., Ghosh, R., <b>Stachelek, J.</b>, Khandelwal, A., Hanson, P.C., Weathers, K.C. <i>Accepted</i>. Using knowledge-guided machine learning to assess patterns of areal change in waterbodies across the contiguous U.S. <i>Environmental Science and Technology</i>.
 
 <li> Weng, W., Coburn, K.M., Kemanian, A.R., Boyle, K.J., Yuning, S., <b>Stachelek, J.</b>, White, C. 2023. Quantifying Co-Benefits of Water Quality Policies: An Integrated Assessment Model of Land and Nitrogen Management. <i>American Journal of Agricultural Economics.</i> <a aria-label="doi link" target="_blank" href="https://doi.org/10.1111/ajae.12423"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 

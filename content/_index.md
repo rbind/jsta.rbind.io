@@ -9,6 +9,6 @@ disable_highlight: true
     <img src="/images/Picture_021.jpg" alt="Ocean scene">
 </div>
 
-<center><strong> Scientific Computing | Aquatic Earth Science | ML/AI </strong></center>
+<center><strong> Scientific Computing | Aquatic Earth Science </strong></center>
 
 <a rel="me" href="https://mas.to/@jsta"></a>

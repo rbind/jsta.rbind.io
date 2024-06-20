@@ -29,10 +29,6 @@ rssLimit = 30
     name = "Blog"
     url = "/blog/"
     weight = 4
-[[menu.main]]
-    name = "Extras"
-    url = "/extras/"
-    weight = 5
 
 [params]
     description = "Personal website of Jemma Stachelek"

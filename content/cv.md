@@ -38,7 +38,7 @@ disable_comments: true
 
 <ol reversed>
 
-<li> Kraklow, V.A., E.C. Thompson, J. Stachelek, E. Casleton, S. Sevanto, L.T. Dickman, A. Junghans. <i>Accepted.</i> Using eddy covariance data to detect nuclear reactor operational status. <i>Journal of Environmental Management</i>
+<li> Kraklow, V.A., E.C. Thompson, <b>J. Stachelek<b>, E. Casleton, S. Sevanto, L.T. Dickman, A. Junghans. <i>Accepted.</i> Using eddy covariance data to detect nuclear reactor operational status. <i>Journal of Environmental Management</i>
 
 <li> Wander, H.L., Farruggia, M.J., La Fuente, S., Korver, M.C., Chapina, R.J., Robinson, J., Bah, A., Munthali, E., Ghosh, R., <b>Stachelek, J.</b>, Khandelwal, A., Hanson, P.C., Weathers, K.C. 2024. Using knowledge-guided machine learning to assess patterns of areal change in waterbodies across the contiguous U.S. <i>Environmental Science and Technology</i>. <a aria-label="doi link" target="_blank" href="https://doi.org/10.1021/acs.est.3c05784"><i aria-hidden="true" class="ai ai-doi" title="doi link"></i> <span class="sr-only">Link to article</span> </a>
 

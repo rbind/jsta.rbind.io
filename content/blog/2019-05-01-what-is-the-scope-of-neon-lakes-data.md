@@ -41,7 +41,7 @@ neon_lakes <- geoNEON::def.extr.geo.os(neon_lakes, locCol = "siteID")
 
 ![](../images/nl_map.png)
 
-NEON provides a [spreadsheet](https://data.neonscience.org/documents/10179/11206/NEON_data_product_status/f82f959f-b53c-44cc-ad2b-70303ac6ddc3) of data availability by type, site, and date where years represent the earliest year of data collection. Below, I've provided a rendered table of this excel sheet filtered by lake sites. The table is sorted vertically (according to variable name) from least to most data available and horizontally (according to lake site) from shortest to longest monitoring period. For example, `SUGG` secchi depth data is quite extensive whereas DNA barcoding data is fairly new and limited.
+NEON (as of 2024) ~~provides a spreadsheet~~ of data availability by type, site, and date where years represent the earliest year of data collection. Below, I've provided a rendered table of this excel sheet filtered by lake sites. The table is sorted vertically (according to variable name) from least to most data available and horizontally (according to lake site) from shortest to longest monitoring period. For example, `SUGG` secchi depth data is quite extensive whereas DNA barcoding data is fairly new and limited.
 
 |Name                                                          |BARC |CRAM |LIRO |PRLA |PRPO |SUGG |
 |:-------------------------------------------------------------|:----|:----|:----|:----|:----|:----|

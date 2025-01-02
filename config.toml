@@ -48,7 +48,6 @@ rssLimit = 30
     alt = "Homepage link"
     
     [params.social]
-    mastodon = "mas.to/@jsta"
     github = "jsta"
     
 [markup]

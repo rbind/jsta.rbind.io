@@ -7,7 +7,6 @@
     <li><a href="https://orcid.org/0000-0002-5924-2464"><i class="ai ai-orcid" aria-hidden="true" title="ORCID"></i><span class="sr-only">ORCID</span></a></li>
     {{ with .Site.Params.social }}
     <li><a href="https://github.com/{{ .github }}"><i class="fa fa-github" aria-hidden="true" title="Github"></i><span class="sr-only">Github</span></a></li>
-    <li><a href="https://{{ .mastodon }}"><i class="fab fa-mastodon" aria-hidden="true" title="Mastodon"></i><span class="sr-only">Mastodon</span></a></li>
     {{ end }}
     <li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i><span class="sr-only">Attribution-NonCommercial-ShareAlike 4.0 International</span></a></li>
     <li><i class="fa fa-copyright" aria-hidden="true" title="Copyright"></i> 2014 - {{ dateFormat "2006" .Site.LastChange }}</li>

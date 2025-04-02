@@ -1,4 +1,4 @@
-baseurl = "http://jsta-rbind-io-6b529f.pages.lanl.gov/"
+baseurl = "http://clean-jsta-rbind-io-2a1533.lisdi-pages.lanl.gov/"
 languageCode = "en-us"
 title = "Jemma Stachelek"
 theme = "hugo-lithium-theme"

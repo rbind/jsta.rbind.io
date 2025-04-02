@@ -1,0 +1,18 @@
+image: python:alpine3.21
+
+before_script:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_0.83.1_Linux-64bit.tar.gz
+  - tar xvf hugo_0.83.1_Linux-64bit.tar.gz
+
+pages:
+  stage: deploy
+  script:
+  - ./hugo -d public
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+      changes:
+        - content/**/*
+        - .gitlab-ci.yml  

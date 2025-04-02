@@ -1,0 +1,720 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+\RequirePackage[T1]{fontenc}
+
+\usepackage{subfiles}
+
+\usepackage{times}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% This package helps LaTeX auto-hyphenate hyphenated words if you use
+% special hyphens. For example, bio\-/mimicry will properly hyphenate
+% ``mimicry'' if necessary.
+%\usepackage[shortcuts]{extdash}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.75in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+% Provides special list environments and macros to create new ones
+% \usepackage[shortlabels]{enumitem}
+% \usepackage{etaremune}
+
+% Simpler bibsections for CV sections
+% (thanks to natbib for inspiration)
+%
+% * For lists of references with hanging indents and no numbers:
+%
+%   \begin{bibsection}
+%       \item ...
+%   \end{bibsection}
+%
+% * For numbered lists of references (with hanging indents):
+%
+%   \begin{bibenum}
+%       \item ...
+%   \end{bibenum}
+%
+%   Note that bibenum numbers continuously throughout. To reset the
+%   counter, use
+%
+%   \restartlist{bibenum}
+%
+%   at the place where you want the numbering to reset.
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{etaremune}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=0pt,partopsep=0pt,
+        topsep=0pt}
+%\let\oldendbibenum\endbibenum
+%\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+
+\newenvironment{bibenum*}
+  {\renewcommand\labelenumi{[\theenumi]}%
+   \etaremune[
+     topsep=0pt,
+     itemsep=\bibsep,
+     parsep=0pt,partopsep=0pt,
+     itemindent=-\bibhang,
+     leftmargin=0.8em
+     ]
+     }
+  {\endetaremune}
+
+\makeatother
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% HEADING AT TOP OF CURRICULUM VITAE
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[{\includegraphics[height=1.5in]{my_picture}}]{Your Name}
+%
+% the picture will be flush right across from the name. For this example
+% to work, make sure the extra set of curly braces is included. Also
+% makes ure that \usepackage{graphicx} is somewhere in the preamble.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+%%% SECTION HEADINGS
+
+% The section headings. Flush left in small caps down pseudo-margin.
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\hyphenpenalty=10000\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+%%% LISTS
+
+% This macro alters a list by removing some of the space that follows the list
+% (is used by lists below)
+\newcommand*\fixendlist[1]{%
+    \expandafter\let\csname preFixEndListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixEndListend#1\endcsname\vspace{-0.6\baselineskip}}}
+
+% These macros help ensure that items in outer-type lists do not get
+% separated from the next line by a page break
+% (they are used by lists below)
+\let\originalItem\item
+\newcommand*\fixouterlist[1]{%
+    \expandafter\let\csname preFixOuterList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\def\item{\pagebreak[2]\oldItem}\csname preFixOuterList#1\endcsname}
+    \expandafter\let\csname preFixOuterListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\let\item\oldItem\csname preFixOuterListend#1\endcsname}}
+\newcommand*\fixinnerlist[1]{%
+    \expandafter\let\csname preFixInnerList#1\expandafter\endcsname\csname #1\endcsname
+    \expandafter\def\csname #1\endcsname{\let\oldItem\item\let\item\originalItem\csname preFixInnerList#1\endcsname}
+    \expandafter\let\csname preFixInnerListend#1\expandafter\endcsname\csname end#1\endcsname
+    \expandafter\def\csname end#1\endcsname{\csname preFixInnerListend#1\endcsname\let\item\oldItem}}
+
+% An itemize-style list with lots of space between items
+%
+% Usage:
+%   \begin{outerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{outerlist}
+\newlist{outerlist}{itemize}{3}
+    \setlist[outerlist]{label=\enskip\textbullet,leftmargin=*}
+    \fixendlist{outerlist}
+    \fixouterlist{outerlist}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{lonelist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{lonelist}
+\newlist{lonelist}{itemize}{3}
+    \setlist[lonelist]{label=\enskip\textbullet,leftmargin=*,partopsep=0pt,topsep=0pt}
+    \fixendlist{lonelist}
+    \fixouterlist{lonelist}
+
+% An itemize-style list with little space between items
+%
+% Usage:
+%   \begin{innerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{innerlist}
+\newlist{innerlist}{itemize}{3}
+    \setlist[innerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+    \fixinnerlist{innerlist}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+%
+% Usage:
+%   \begin{loneinnerlist}
+%       \item ...    % (or \item[] for no bullet)
+%   \end{loneinnerlist}
+\newlist{loneinnerlist}{itemize}{3}
+    \setlist[loneinnerlist]{label=\enskip\textbullet,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt}
+    \fixendlist{loneinnerlist}
+    \fixinnerlist{loneinnerlist}
+
+%%% EXTRA SPACE
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+%%% FORMATTING MACROS
+
+\usepackage{doi}
+% To change the text before the DOI, adjust this command
+%\renewcommand\doitext{doi:}
+
+% Provides a linked \url{#1} that doesn't require escape characters
+\usepackage{url}
+
+% You can adjust the style \url{} uses here:
+% (options are: same, rm, sf, tt; defaults to tt)
+\urlstyle{same}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+% (uncomment to typeset the e\-/mail address in typewriter font;
+%  otherwise, will be typeset in the \urlstyle above)
+%\DeclareUrlCommand\emaillink{\urlstyle{tt}}
+\providecommand*\emaillink[1]{\nolinkurl{#1}}
+\providecommand*\email[1]{\href{mailto:#1}{\emaillink{#1}}}
+
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+% Custom hyphenation rules for words that LaTeX has trouble with
+\hyphenation{bio-mim-ic-ry bio-in-spi-ra-tion re-us-a-ble pro-vid-er Media-Wiki}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Jemma Stachelek}
+
+\section{Contact Information}
+\vspace{-1em}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table. Table is one row made up of three parboxes. The left
+%       parbox has address info, the middle parbox has a vertical bar,
+%       and the right parbox has phone and electronic contact
+%       information.
+%
+% MACROS: \rcollength is the width of the right column of the table
+%             (adjust it to your liking; default is 1.85in).
+%         \spacewidth is width of area between left and right boxes.
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.85in}%
+\newlength{\spacewidth}\setlength{\spacewidth}{20pt}
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength-\spacewidth}@{}p{\spacewidth}@{}p{\rcollength}}%
+
+    % Address box
+    \parbox{\textwidth-\rcollength-\spacewidth}{%
+        \href{https://www.lanl.gov/org/ddste/aldsc/hpc/index.php}{High Performance Computing Division} \\
+        \href{https://lanl.gov/}{Los Alamos National Laboratory}                                                                                 \\
+        Los Alamos, NM, USA}
+
+                                                                                      &
+    % Uncomment to add a vertical bar in middle of contact information
+    %{\vrule width 0.5pt}
+    \parbox[m][5\baselineskip]{\spacewidth}{}                                         &
+
+    % Non-snail-mail contact information
+    \parbox{\rcollength+2.5em}{%
+        \vspace{1em}
+        % \textit{Telephone:} +1-517-884-1769                      \\
+        \textit{E-mail:} \email{jsta@lanl.gov}                                                                                                   \\
+        \textit{WWW:} \href{https://jsta.rbind.io/}{https://jsta.rbind.io}                                                                       \\
+        \textit{ORCID:} \hspace{-0.4em} \href{http://orcid.org/0000-0002-5924-2464}{0000-0002-5924-2464}                                         \\
+    \textit{G. Scholar:} \href{https://scholar.google.com/citations?user=IkYbVz8AAAAJ & hl=en}{IkYbVz8AAAAJ}}
+\end{tabular}
+
+% \section{Research Interests}
+% 
+% Landscape Ecology, GIS, Open Science, Sea Level Rise
+
+%\vspace{-1em}
+\section{Education}
+
+PhD, \href{ http://www.canr.msu.edu/fw/}{\textbf{Michigan State University}}%
+\hfill \textbf{2016 to 2020} \vspace{1em}
+
+MS, \href{https://www.utexas.edu/}{\textbf{University of Texas at Austin}}%
+\hfill \textbf{2009 to 2012} \vspace{1em}
+
+BS, \href{https://www.maine.edu/}{\textbf{University of Maine}}%
+\hspace{22em} \textbf{2004 to 2008}
+
+\section{Professional Experience}
+
+Scientist, \href{https://lanl.gov/}{\textbf{Los Alamos National Laboratory, High Performance}} \hfill \textbf{2023 to Present}
+
+\href{https://lanl.gov/}{\textbf{Computing Division}}%
+\vspace{1em}
+
+Postdoctoral Research Fellow, \href{https://lanl.gov/}{\textbf{Los Alamos National Laboratory}} \hfill \textbf{2021 to 2023}
+\vspace{1em}
+
+Postdoctoral Research Associate, \href{https://limnology.wisc.edu/}{\textbf{University of Wisconsin,}} \hfill \textbf{2020 to 2021}
+
+\href{https://limnology.wisc.edu/}{\textbf{Center for Limnology}}%
+\vspace{1em}
+
+Research Scientist, \href{https://www.sfwmd.gov/}{\textbf{South Florida Water Management District}} \hfill \textbf{2012 to 2016}
+\vspace{1em}
+
+Research Technician, \href{https://marinescience.utexas.edu/directory/kenneth-dunton}{\textbf{University of Texas Marine Botany Lab}} \hfill \textbf{2008 to 2009}
+
+
+\section{Refereed Publications} % \\ \tiny{\underline{total citations}} [612] \\ software citations [24] \\ per Google Scholar}
+
+\begin{bibenum*}
+
+    \subfile{papers}
+
+\end{bibenum*}
+
+\vspace{0.1in}
+
+% \section{Publications In-Review (available upon request)}
+
+% \restartlist{bibenum}
+% 
+% \begin{bibenum*}
+%    
+% \end{bibenum*}
+
+\section{Pre-prints \\ and Whitepapers}
+
+\restartlist{bibenum}
+
+\begin{bibenum*}
+
+    %   \item Park, S.R., \textbf{Stachelek, J.}, Dunton K.H. Photosynthesis and drought resilience in three emergent vascular plant species common to marshes of the western Gulf of Mexico.
+
+    \item \textbf{Stachelek J.}, Abolt, C.J., Schwenk, J. 2024. Enabling high resolution hydrologic routing with machine learning assisted waterbody classification. \emph{ESS Open Archive}. \href{https://doi.org/10.22541/essoar.171578782.22110644/v1}{link}
+
+    \item \textbf{Stachelek J.}, Regier, P., Schwenk, J., Ward, N. 2023. Uncertainty in global time-resolved methane emissions from aquatic waterbodies. \emph{AI4CH4}. \href{https://www.ai4esp.org/files/AI4CH4/whitepapers/AI4CH406_Jemma_Stachelek.pdf}{link}
+    
+    \item Bennett, K. Karra, S., Vesselinov, V.V., Schwenk, J. \textbf{Stachelek, J.}, Nearing, G. 2022. Advancing the use of ML for improved understanding of hydrologic extremes under climate change. \emph{AI@DOE}.
+
+    \item \textbf{Stachelek J.}, Madden, C.J., Kelly, S.P, Blaha, M. 2022. Improved estimation of phytoplankton abundance and fine-scale water quality features via simultaneous discrete and semi-continuous surveys. \emph{EarthArxiv}. \href{https://doi.org/10.31223/X54S8M}{10.31223/X54S8M}
+
+\end{bibenum*}
+
+%\vspace{-1.5em}
+\section{Public \\ Datasets}
+%\vspace{1.5em}
+
+\restartlist{bibenum}
+\begin{bibenum*}
+    \item Schwenk, J. \textbf{Stachelek, J.}, Avendaño, S. Salinity, temperature, and turbidity from 2000-2021 in the Chesapeake Bay. \href{https://doi.org/10.6084/m9.figshare.21578898.v1}{https://doi.org/10.6084/m9.figshare.21578898.v1}
+
+    \item \textbf{Stachelek, J.}, L.K. Rodriguez, et al. 2021. LAGOS-US DEPTH v1.0: Data module of observed maximum and mean lake depths for a subset of lakes in the conterminous U.S. ver 1. \emph{Environmental Data Initiative} \href{https://doi.org/10.6073/pasta/64ddc4d04661d9aef4bd702dc5d8984f}{https://doi.org/10.6073/pasta/64ddc4d04661d9aef4bd702dc5d8984f}
+
+    \item \textbf{Stachelek, J.} 2021. Bathymetry Data for 5,000 Lakes. \href{https://doi.org/10.6084/M9.FIGSHARE.12722246}{10.6084/M9.FIGSHARE.12722246}
+
+    \item \textbf{Stachelek J.} 2019. Freshwater connectivity and stream morphology metrics for Northeast and Midwestern US lakes. \href{https://doi.org/10.5281/zenodo.2554212}{https://doi.org/10.5281/zenodo.2554212}
+
+    \item \textbf{Stachelek J.}, Ford C., Kincaid D., King K., Miller H., Nagelkirk R. 2017. The National Eutrophication Survey: lake characteristics and historical nutrient concentrations. \emph{KNB Data Repository} \href{http://dx.doi.org/10.5063/F10G3H3Z}{http://dx.doi.org/10.5063/F10G3H3Z}
+
+    \item Madden C, \textbf{Stachelek J}, Kelly S, Blaha M. 2017. Florida Bay water quality estimated by underway flow-through measurement. \emph{KNB Data Repository} \\ \href{http://dx.doi.org/10.5063/F11R6NGR}{http://dx.doi.org/10.5063/F11R6NGR}
+
+\end{bibenum*}
+
+\section{\href{https://github.com/jsta}{Software \\ Development} \tiny{(See \underline{\href{https://jsta.rbind.io/products/}{Open Science Portfolio}}})}
+
+\restartlist{bibenum}
+\begin{bibenum*}
+
+    \item Schwenk, J., Zussman, T., \textbf{Stachelek, J.}, Rowland, J.C., 2022. rabpro: python toolbox to delineate watershed basins and compute attribute statistics. \href{https://github.com/VeinsOfTheEarth/rabpro}{Python toolbox}.
+    
+    \item Schwenk, J., Hariharan, J., \textbf{Stachelek, J.}, Vulis, L., Barnhart, K. 2022. RivGraph: Tools for topological analysis of fluvial networks from binary masks. \href{https://github.com/VeinsOfTheEarth/RivGraph}{Python toolbox}.
+    
+    \item \textbf{Stachelek, J.} 2019. gssurgo: Python toolbox enabling an open source gSSURGO workflow. \href{https://github.com/jsta/gssurgo}{Python toolbox}.
+    
+    \item \textbf{Stachelek, J.} 2019. nhdR: Tools for working with the National Hydrography Dataset. \href{https://github.com/jsta/nhdR}{R package}.
+    
+    \item \textbf{Stachelek J.}, Oliver S. 2019. LAGOSNE: Interface to the Lake Multi-scaled Geospatial and Temporal Database. \href{https://cran.r-project.org/package=LAGOSNE}{R package}.
+    
+    \item \textbf{Stachelek J.} 2019. dbhydroR: Everglades Hydrologic and Water Quality Data from R. \href{https://github.com/ropensci/dbhydroR}{R package}.
+
+    \item Chamberlain, S., Anderson, B., Salmon, M., Erickson, A., Potter, N., \textbf{Stachelek, J.}, Simmons, A., Ram, K., Hart, E. 2019. rnoaa: 'NOAA' Weather Data from R. \href{https://github.com/ropensci/rnoaa}{R package}.    
+
+    \item \textbf{Stachelek J.} 2018. ipdw: Interpolation by Inverse Path Distance Weighting. \href{https://github.com/jsta/ipdw}{R package}.
+
+    \item Hollister, J.W., \textbf{Stachelek J.} 2018. lakemorpho: Lake Morphometry Metrics in R. \href{https://github.com/jhollist/lakemorpho}{R package}.
+\end{bibenum*}
+
+\section{Selected Academic Presentations}
+
+\restartlist{bibenum}
+\begin{bibenum*}
+    
+    \item Carolina C. Barbosa, \textbf{Jemma Stachelek}, Alice Carter, Isabella A. Oleksy, Linnea A. Rock, Joshua Culpepper, Xiangzhen Kong, Sarah Collins. Navigating Change: Exploring the controls on Nitrogen and Phosphorus Retention in Western US Lakes and Reservoirs. ASLO Summer Meeting, Madison, WI, USA. June 2024.
+    
+    \item Kraklow, Vachel, Dickman, L. Turin, Sevanto, Sanna, \textbf{Stachelek, Jemma}, Casleton, Emily Michele, Thompson, Christi, Junghans, Ann. Detecting nuclear effluent signatures at FluxNet ecological monitoring stations. Poster Presentation at the AGU Fall Meeting, San Francisco, CA, USA, December 2023.
+
+    \item \textbf{Stachelek, J.}, Abolt, C.J., Schwenk J. Scalable machine learning pipelines for waterbody delineation, classification, and change detection. Poster Presentation at the HydroML Symposium, Berkeley, CA, USA. May 23, 2023.
+
+    \item Bennett, K., Schwenk, J., Gasarch, E., \textbf{Stachelek, J.}, Bolton, R., Rowland, J. Recent Changes in Streamflow Seasonality across Permafrost Basins of North America. Oral Presentation at the AGU 2022 Fall Meeting, Chicago, IL, USA. December 12, 2022.
+
+    \item \textbf{Stachelek, J.}, Avendaño, S., Schwenk J. Geographically-Aware Estimates of Remotely Sensed Water Properties for Chesapeake Bay. Poster Presentation at the AGU 2022 Fall Meeting, Chicago, IL, USA. December 16, 2022.
+    
+    \item \textbf{Stachelek, J.}, Schwenk, J. Identifying false positive lakes in surface water detection datasets. Poster presentation at the HydroML Symposium, Penn State University, PA, USA. May 18, 2022.
+    
+    \item Rowland, J.C., Schwenk, J., Muss, J., Shelef, E., \textbf{Stachelek, J.}, Stauffer, S., Ahrens, D., Douglas, M., Chadwick, A., Lamb, M., Piliouras, A. Multiscale analysis of remotely sensed imagery to quantify spatial and temporal patterns of river bank erosion in floodplains with permafrost. Presentation at the International Circumpolar Remote Sensing Symposium. University of Alaska - Fairbanks, Fairbanks, AK, May 16, 2022.
+
+    \item Schwenk J., \textbf{Stachelek, J.}, Bennett, K., Prior, E., Zussman, T., Rowland, J. Veins of the Earth: a Flexible Framework for Mapping, Modeling, and Monitoring the Earth's River Networks. Poster Presentation at the AGU 2021 Fall Meeting, Virtual, December 13, 2021.
+
+    \item \textbf{Stachelek, J.}, Schwenk, J., Bennett, K.E. 2021. \href{https://doi.org/10.1002/essoar.10509383.1}{Flexible Integration of Lakes in Global River Systems}. Poster Presentation at the AGU 2021 Fall Meeting, Virtual, December 13, 2021.
+
+    \item Wander, H., R.J. Chapina, A. Bah, M.J. Farruggia, R. Ghosh, M.C. Korver, S. La Fuente, E. Massa, E. Munthali, J. Robinson, \textbf{J. Stachelek}, A. Khandelwa, P.C. Hanson, K.C. Weathers. 2021. Using machine learning to assess patterns of areal change in lakes and reservoirs of the contiguous US. Poster Presentation at the 2nd Workshop on Knowledge Guided Machine Learning, Virtual, August 10, 2021.
+
+    \item \textbf{Stachelek, J.} 2021. Challenges and future directions for hacking lake bathymetry data. Oral Presentation at the Data Science and Open Science in Aquatic Research Summit, Virtual, July 23, 2021.
+
+    \item Ladwig, R., L. Gao, J. Willard, A. Appling, A. Delany, \textbf{J. Stachelek}, H.A. Dugan, S. Oliver, J.S. Read, P.C. Hanson. 2020. Two-layer bayesian dissolved oxygen model for ecological process discovery. Poster Presentation at the Global Lake Ecological Observatory Network Meeting, Virtual, Oct 19 2020.
+
+    \item Weng, W., K. M. Cobourn, A. R. Kemanian, K. J. Boyle, Y. Shi, \textbf{J. Stachelek}, C. White. 2020. Quantifying Co-benefits of Water Quality Policies:  An Integrated Assessment Model of Nitrogen Management. Selected paper, Agricultural and Applied Economics Association Meeting, Aug 11 2020.
+
+    \item McCullough, I.M., <7 alphabetical authors>, \textbf{Stachelek, J.} 2020. Data synthesis: No picnic, but no need to panic. Oral Presentation at the Ecological Society of America Meeting, Virtual, Aug 3 2020.
+
+    \item \textbf{Stachelek, J.}, Rodriguez L., Soranno P.A. 2019. Spatial patterning and prediction of lake depth at continental scales. Poster Presentation at the Global Lake Ecological Observatory Network Meeting, Huntsville, ON, CA. Nov 6 2019.
+
+    \item \textbf{Stachelek, J.}, <8 authors>. 2019. \href{https://doi.org/10.6084/m9.figshare.12486164.v2}{Analysis of 500 lake catchments reveals the relationship between crop type, fertilizer and manure inputs and lake nutrient concentrations}. Oral Presentation at the Ecological Society of America Meeting, Louisville, Kentuckey, USA. Aug 13 2019.
+
+    \item McCullough, I.M., King, K., \textbf{Stachelek, J.}, <3 authors>. 2019. No lake left behind: Do protected areas facilitate biological connectivity among lakes? Oral Presentation at the Ecological Society of America Meeting, Louisville, Kentuckey, USA. Aug 13 2019.
+
+    \item Kelly, S.P., \textbf{Stachelek, J.}, Strazisar, T. 2019. Examining the effects of sea-level rise on Everglades coastal marshes using coupled mesocosm and in-situ field manipulations: design and implementation. Oral Presentation to the Greater Everglades Ecosystem Restoration Conference, Coral Springs, Florida, USA. Apr 2019.
+
+    \item \textbf{Stachelek, J.}, Soranno, P.A. 2018. \href{https://doi.org/10.6084/m9.figshare.5903875.v2}{Does Lake and Stream Connectivity Control Phosphorus Retention in Lakes?} Oral Presentation to the Association for the Sciences of Limnology and Oceanography, Victoria, British Columbia, CA. Jun 15 2018.
+
+    \item Smith, N., Soranno, P.A., Cheruveill, K., Gries, C., \textbf{Stachelek, J.} 2018. Mapping a Journey Towards Open Science: Lessons Learned Building a Lake Water Quality Geodatabase. Oral Presentation at the American Water Resources Association GIS \& Water Resources X Conference, Orlando, Florida, USA. Apr 23 2018.
+
+    \item \textbf{Stachelek, J.}, Soranno, P.A. 2017. \href{https://doi.org/10.6084/m9.figshare.9638735.v1}{Does Connectivity Control Lake Phosphorus Retention?} Poster Presentation at the Global Lake Ecological Observatory Network Meeting, New Paltz, New York, USA. Nov 29 2017.
+
+    \item Collins, S.M, Cheruvelil, K.S., Fergus, C.E., Lapierre, J.F., Oliver, S.K., Scott, C.E., Skaff, N.K., Soranno, P.A., \textbf{Stachelek, J.}, Tan, P., Yuan, S. and Wagner, T. 2017. Which measures of climate are the best predictors of lake water quality at sub-continental scales? Oral Presentation at the Ecological Society of America Meeting, Portland, Oregon, USA. Aug 06 2017.
+
+    \item Nowosad, J., Teucher A., \textbf{Stachelek, J.}, Cotton, R., Vitolo, C. 2017. The State of Data on CRAN: Discovering Good Data Packages. Oral Presentation at the rOpenSci Unconference, Los Angeles, CA, USA. May 26 2017.
+
+    \item Madden, C.J., M. Koch, T. Strazisar, T. Troxler, Y. Shangguan, S.P. Kelly, \textbf{J. Stachelek}, R.M. Price, and F.H. Sklar, 2017. Interconnections in the Everglades and Florida Bay Watershed: Implications for Ecosystem Integrity. 2017 American Water Resources Association Spring Conference, Snowbird, Utah, May 3, 2017.
+
+    \item Sklar, F.H., C. Coronado-Molina, \textbf{J. Stachelek}, S.P. Kelly, and T. Troxler, 2017. Coastal Subsidence as a Function of Salinity Intrusion and Peat Decomposition in a Karst Environment. Greater Everglades Ecosystem Restoration Meeting, Coral Springs, Florida, April 20, 2017.
+
+    \item \textbf{Stachelek, J.} 2017. \href{https://doi.org/10.6084/m9.figshare.8187038.v1}{Lake Connectivity Effects on Phosphorus in 1,000s of Lakes}. Oral Presentation at the Michigan State University Fisheries and Wildlife Graduate Research Symposium. Feb 24 2017.
+
+    \item Kominoski, J, Evelyn Gaiser, Tiffany Troxler, <12 others>, \textbf{Stachelek, J.}, <20 others>. 2016. Saltwater intrustion and carbon loss: identifying the biogeochemical attributes that drive differential responses among coastal wetlands. Poster Presentation at the International Long Term Ecological Research Meeting, Kruger National Park, South Africa. Oct 09 2016.
+
+    \item \textbf{Stachelek, J.}, Madden, C.J., Kelly, S., Blaha, M. 2016. \href{https://doi.org/10.6084/m9.figshare.2775322.v4}{Fine-scale spatial patterning of phytoplankton abundance in a coastal estuary}. Oral Presetentation at the Ecological Society of America Meeting, Fort Lauderdale, Florida, USA. Aug 07 2016.
+
+    \item Troxler, T.G., <12 others>, \textbf{Stachelek, J.}, Wilson, B.J. 2016. Carbon cycle science in the Florida Coastal Everglades: Research to inform carbon and water management. Oral Presentation at the Ecological Society of America Meeting, Fort Lauderdale, Florida, USA. Aug 07 2016.
+    %   
+    \item Sklar, F.H., Coronado, C., Troxler, T.G., \textbf{Stachelek, J.}, Kelly, S., Kominoski, J.S. 2016. Coastal subsidence as a function of salinity intrusion and peat decomposition in a karst environment. Oral Presentation at the Ecological Society of America Meeting, Fort Lauderdale, Florida, USA. Aug 07 2016.
+    %   
+    \item \textbf{Stachelek, J.}. 2015. Resolving Fine-Scale Patterning and Restoration Outcomes in the Coastal Everglades. Oral Presentation at the Greater Everglades Ecosystem Restoration Meeting, Coral Springs, Florida, USA. Apr 21 2015. %[slides](http://conference.ifas.ufl.edu/geer2015/Documents/Speaker%20Presentations/SESSION%2010/1400_Stachelek_Joseph.pdf) 
+    %   
+    \item Kominoski, J., Servais, S., B.J. Wilson, V. Mazzei, E.E. Gaiser, T. Troxler, C. Coronado-Molina, S.E. Davis, S.P. Kelly, \textbf{J. Stachelek}, F.H. Sklar, C.J. Madden, and L. Bauman. 2015. Effects of increased water salinity and inundation on microbial processing of carbon and nutrients in oligohaline wetland soils. Oral Presentation at the Ecological Society of America 100th Annual Meeting, Baltimore, Maryland, USA. Aug 09 2015.
+    %   
+    \item Troxler, T., F.H. Sklar, S.E. Davis, E.E. Gaiser, S.P. Kelly, J. Kominoski, C.J. Madden, V. Mazzei, C. Coronado-Molina, D.T. Rudnick, S. Servais, \textbf{J. Stachelek}, and B.J. Wilson. 2015. The effects of projected sea-level rise on Everglades coastal ecosystems: Evaluating the potential for and mechanisms of peat collapse. Oral Presentation at the Ecological Society of America 100th Annual Meeting, Baltimore, Maryland, USA. Aug 09 2015.
+    %   
+    \item Wilson, B., Troxler, T., Gaiser, E., Kominoski, J., Richards, J., Servais, S., \textbf{Stachelek, J.}, Kelly, S. Kelly, Sklar, F., Coronado-Molina, C., Madden, C., Davis, S.E., Mazzei, V., Schulte, N., Bauman, L. 2014. Ecosystem Productivity Responses to Saltwater Intrusion and P Loading As a Result of Future Sea Level Rise in the Coastal Everglades. Poster Presentation at the American Geophysical Union Meeting, San Fransisco, California, USA. Dec 15 2014.
+
+    \item \textbf{Stachelek, J.}, Madden, C.J. 2013. High Density Spatial Mapping of Water Quality Patterns Reveals Impacts of Freshwater Inputs in Florida Bay, USA. Poster Presentation at the Coastal and Esutarine Reserach Federation, San Diego, California, USA. Nov 03 2013.
+
+    \item Madden, C.J., McDonald, A.A., Koch-Rose, M., Glibert, P., Kelly, S.P., \textbf{Stachelek, J.} 2013. Exploring Linkages Among Watershed-Estuary Processes in the Southern Everglades, Florida Bay Using Model Synthesis. Oral Presentation at the Coastal and Esutarine Reserach Federation, San Diego, California, USA. Nov 03 2013.
+
+    \item \textbf{Stachelek J.}, Dunton K.H. 2012. \href{https://doi.org/10.6084/m9.figshare.6614960.v1}{Porewater salinity dynamics in an irregularly flooded marsh}. Poster Presentation at the Texas Bays and Estuaries Meeting, Port Aransas, Texas, USA. April 2012.
+
+    \item \textbf{Stachelek J.}, Dunton, K.H. 2011. Estimation of freshwater inflow requirements for a semi-arid salt marsh using emergent plants as indicators of ecosystem condition. Oral Presentation at the Coastal and Esutarine Reserach Federation, Daytona Beach, Florida, USA. Nov 06 2011.
+
+    \item Park, S.R., \textbf{Stachelek J.}, Dunton, K.H. 2011. Seasonal variations in photosynthetic characteristics of three major emergent salt marsh plants in the Southwestern Gulf of Mexico. Oral Presentation at the Coastal and Esutarine Reserach Federation, Daytona Beach, Florida, USA. Nov 06 2011.
+
+    \item \textbf{Stachelek J.}, Dunton, K.H. 2011. Porewater salinity dynamics within emergent salt marsh vegetation. Oral Presentation at the Benthic Ecology Meeting, Mobile, Alabama, USA. Mar 16 2011.
+
+    \item \textbf{Stachelek, J.}, Brawley, S.H. 2008. Constructing a guide to intertidal algae of Acadia and testing DNA barcoding. Poster Presentation at the Northeast Algal Society Meeting, Durham, New Hampshire, USA. Apr 18 2008.
+
+\end{bibenum*}
+
+\section{Invited Presentations}
+
+\restartlist{bibenum}
+\begin{bibenum*}
+
+    \item \textbf{Stachelek, J.}, Scaling and extrapolation of lake water quality using abstraction, Center for Limnology, University of Wisconsin (Virtual-online), Oct 7, 2020.
+
+\end{bibenum*}
+
+\section{Workshops Given} % \vspace{-1em}
+
+\href{}{\textbf{Miscellaneous}}
+\begin{outerlist}
+
+    \item[]
+    \begin{innerlist}
+        \item Basics of geospatial analysis for research computing. Sep 24 2021, Global Lake Ecological Observatory Network (GLEON) Meeting. Virtual-online instruction.
+        \item Version control software (Git) for application in academic research. Oct 13 2020. Global Lake Ecological Observatory Network (GLEON) Meeting. Virtual-online instruction.
+        \item Basics of geospatial analysis for research computing. Feb 27 2020, Great Lakes Acoustic Telemetry Observation System (GLATOS) Coordination Meeting.
+        \item Basics of editing Wikipedia, recommended practices, and reasonable workflows. Jun 12 2018, Association for the Sciences of Limnology and Oceanography (ASLO) Meeting.
+        \item Version control software (Git) for application in academic research. Apr 28 2017. MSU EEBB Programming Group.
+        \item Basics of Python and the Linux command line for research computing. Jan 12 2017. MSU Institute for Cyber-enabled Research.
+    \end{innerlist}
+
+\end{outerlist}
+
+\halfblankline
+
+\href{https://software-carpentry.org/}{\textbf{Software Carpentry (certified instructor)}}
+\begin{outerlist}
+
+    \item[] {\emph{Lesson Maintainer} for \href{https://datacarpentry.org/lessons/}{Geospatial Data Analysis with R} materials}
+    \hfill \textbf{2015 to 2023}
+
+    \item[]
+    \begin{innerlist}
+        \item Basics of geospatial analysis for research computing. Sep 26 2017, Lawrence Berkeley National Laboratory.
+        \item Basics of geospatial analysis for research computing. Jul 21 2016, South Florida Water Management District.
+        \item Basics of geospatial analysis for research computing. May 26 2016, South Florida Water Management District.
+    \end{innerlist}
+
+\end{outerlist}
+
+\section{Professional Service}
+
+\textbf{Reviewer}
+\begin{innerlist}
+    \item \emph{NSF (external)} [2], \emph{Limnology and Oceanography}, \emph{Limnology and Oceangraphy: Methods}, \emph{Journal of Advances in Modeling Earth Systems}, \emph{Limnology and Oceanography: Letters}, \emph{PNAS}, \emph{Water}, \emph{Air Soil and Water Research}, \emph{Earth Syst. Sci. Data}, \emph{BioScience}, \href{https://github.com/ropensci/onboarding/issues/118}{\emph{rOpenSci}}, \emph{Texas Water Journal}, \emph{Journal of Open Source Software} [6], \emph{Journal of Atmospheric and Oceanic Technology}, \emph{Ecologial Modelling} [2], \emph{Frontiers in Ecology and Evolution} [2], \emph{ReScience} [2], \emph{Methods in Ecology and Evolution}, \href{https://github.com/openjournals/jose-reviews/issues/42}{\emph{Journal of Open Source Education}}, \emph{Aquatic Conservation: Marine and Freshwater Ecosystems}, \emph{Journal of Geophysical Research: Earth Surface}
+\end{innerlist}
+
+\halfblankline
+
+\textbf{Other Activities}
+\begin{innerlist}
+
+    \item Mentor, (July 9-18, 2024) \href{https://www.openhackathons.org/s/siteevent/a0CUP000000ukh02AA/se000322}{LANL Open Hackathon - Venado}.
+
+    \item \href{https://joss.theoj.org/about#topic_editors}{Editor}, (2023-2024) Journal of Open Source Software
+
+    \item President, (2024) Association for Women Geoscientists - Laramide Chapter
+
+    \item President-elect, (2023) Association for Women Geoscientists - Laramide Chapter
+
+    \item Erdmann, Christopher, Meyer, Michael F., Little, John R., Hondula, Kelly, \textbf{Stachelek, Jemma}, Oleksy, Isabella, Brousil, Matthew R., Claborn, Kelly, Mesman, Jorrit, Dennis, Tim. (2021). Guidance for AGU Authors: R Script(s)/Markdown. Zenodo. \url{https://doi.org/10.5281/zenodo.5647998}
+
+    \item Soranno, P., King, K., Poisson, A., \textbf{Stachelek, J.}, Boudreau, C., Skaff, N., Smith, N. (2017) Cyberinfrastructure support for collaboration and open science in ecology. NSF Request for Information on Future Needs for Advanced Cyberinfrastructure to Support Science and Engineering Research.
+
+    \item NEON spatio-temporal hackathon (2015) - developed tutorials and assessment instruments to teach fundamental big data skills needed to work efficiently with large spatio-temporal data using open tools, such as R and Python. \href{http://www.neonscience.org/updates-events/update/nsf-biocenters-unite-close-scientific-data-skills-gap-focus-phenology}{link}
+
+\end{innerlist}
+
+\halfblankline
+
+\section{Outreach}
+
+\begin{innerlist}
+
+    \item Group leader for the \emph{STEM Santa Fe} team in the Northern New Mexico Community Data Sprint, July 25-29 2022, Virtual. \href{https://community.lanl.gov/economic-development/data-sprint/}{https://community.lanl.gov/economic-development/data-sprint/}
+
+    \item Special Awards judge for the: Northeastern New Mexico Science and Engineering Fair, March 12 2022, New Mexico Highlands University,  Las Vegas, NM, USA.
+
+    \item \textbf{Stachelek, J.}, Hondula, K., Kincaid, D., Shogren, A., Zwart, J. 2020. Ripples on the web: spreading lake information via Wikipedia. Limnology and Oceanography Bulletin. \href{https://doi.org/10.1002/lob.10382}{10.1002/lob.10382}.
+
+    \item Everglades Day, Feb 20 2016, Guided tours of science activities at the Loxahatchee Impoundment Landscape Assessment, 17th Annual Everglades Day, Loxahatchee National Wildlife Refuge.
+
+    \item Interviewed for: National Public Radio, May 25 2016, \href{https://www.npr.org/2016/05/25/477014085/rising-seas-push-too-much-salt-into-the-florida-everglades}{Rising Seas Push Too Much Salt Into the Florida Everglades}.
+
+    \item Interviewed for: PBS Newshour, June 10 2015, \href{https://www.youtube.com/watch?v=ggOl-vaXIFk}{Florida's Everglades face new invasive threat: rising sea levels}.
+
+\end{innerlist}
+
+% \section{Other Software Skills}
+% \vspace{1em}
+% 
+% \begin{innerlist}
+%   \item Operating Systems: Debian/Ubuntu/Fedora Linux, Windows
+%   \item Coding languages: R, Python, Fortran
+%   \item Data management: SQLite, netcdf
+%   \item Version control systems: Git, GitHub
+%   \item Web development: `shiny`, css
+%   \item Data science: HPC, AWS, GNU Make
+% \end{innerlist}
+
+% \section{Additional Coursework and Training}
+% 
+% \begin{innerlist}
+%         \item this is a workstop
+% \end{innerlist}
+
+\section{Grants}
+
+\begin{innerlist}
+
+    \item Center for Space and Earth Science, Los Alamos National Laboratory, \emph{Hydrologic Restoration for Climate Adaptation: Unintended Consequences for Mosquito-borne Disease}. Principal Investigator. (\$70,000)
+    \item National Oceanic \& Atmospheric Administration, Florida Sea Grant, \emph{The effects of projected sea-level rise on Everglades coastal ecosystems: Evaluating the potential for and mechanisms of peat collapse using integrated mesocosm and field manipulations.} Assisting Author, PI Tiffany Troxler (FIU) (\$279,216)    
+
+\end{innerlist}
+
+\section{Mentorship}
+
+\textbf{Undergraduate students}
+\begin{innerlist}
+    \item Jake Namovich (MSU)
+    \item Sebastian Zhu (UW)
+\end{innerlist}
+
+\textbf{Los Alamos National Laboratory}
+\begin{innerlist}
+    \item Shubhendu Kumar Singh (LANL)
+\end{innerlist}
+
+\section{Honors and Awards}
+
+\begin{innerlist}
+
+    \item LANL, Large Team Distinguished Performance Award (DPA). Oct 2024.
+
+    \item \href{https://www.lanl.gov/careers/career-options/postdoctoral-research/index.php}{LANL Director's Postdoctoral Fellowship}. January 2022.
+
+    \item \href{https://grad.msu.edu/fellowships/dissertation}{MSU Dissertation Completion Fellowship}. Summer 2020.
+
+    \item GLEON G21 Student Travel Award. Nov 4 2019.
+
+    \item GLEON G19 Student Travel Award. Nov 27 2017.
+
+    \item Invited participant at the \href{https://unconf17.ropensci.org/}{2017 rOpenSci Conference}. May 25 2017.
+
+    \item Finalist for the 2012 NOAA Coastal Management Fellowship for Texas.
+
+    \item Best poster award at the 2012 Texas Bays and Estuaries Meeting. Apr 11 2012. \emph{Porewater Water Salinity Dynamics within the Creekbank Areas of an Irregularly Flooded Salt Marsh}.
+
+\end{innerlist}
+
+\section{Professional Memberships}
+
+% Coastal and Estuarine Research Federation
+
+Association for the Sciences of Limnology and Oceanography
+
+American Geophysical Union
+
+% Ecological Society of America
+
+Global Lake Ecological Observatory Network
+
+% Foundation for Open Access Statistics
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%

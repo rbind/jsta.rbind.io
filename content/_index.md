@@ -8,5 +8,3 @@ disable_highlight: true
 <div id="widerimg">
     <img src="/images/Picture_021.jpg" alt="Ocean scene">
 </div>
-
-<center><strong> Scientific Computing | Aquatic Earth Science </strong></center>

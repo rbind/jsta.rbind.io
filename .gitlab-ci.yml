@@ -7,7 +7,7 @@ before_script:
 pages:
   stage: deploy
   script:
-  - ./hugo -d public --baseURL="$HUGO_BASEURL"
+  - ./hugo -d public --baseURL='$HUGO_BASEURL'
   artifacts:
     paths:
     - public

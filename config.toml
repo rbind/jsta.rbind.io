@@ -30,7 +30,6 @@ rssLimit = 30
     description = "Personal website of Jemma Stachelek"
     dateFormat = "2006/01/02"
     customCSS = ["css/style-new.css", "css/custom.css"]
-    customJS = ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js"]
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.11.0"

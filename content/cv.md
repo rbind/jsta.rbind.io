@@ -191,7 +191,7 @@ See [Products](https://jsta.rbind.io/products/) page
 ## Service Activity
   
 - Soranno, P., King, K., Poisson, A., **Stachelek, J.**, Boudreau, C., Skaff, N., Smith, N. (2017) Cyberinfrastructure support for collaboration and open science in ecology. NSF Request for Information on Future Needs for Advanced Cyberinfrastructure to Support Science and Engineering Research
-- Reviewer (2017) _Journal of Open Source Software_, _Frontiers in Ecology and Evolution_, [ROpenSci](https://github.com/ropensci/onboarding/issues/118)
+- Reviewer (2017) _Journal of Open Source Software_, _Frontiers in Ecology and Evolution_, [ROpenSci](https://github.com/ropensci/software-review/issues/118)
 - Reviewer (2016) _Texas Water Journal_, _Journal of Open Source Software_ (2), _Peerage of Science_, _Journal of Atmospheric and Oceanic Technology_
 - Reviewer (2015) _Ecological Modelling_
 - NEON spatio-temporal hackathon (2015) - developed tutorials and assessment instruments to teach fundamental big data skills needed to work efficiently with large spatio-temporal data using open tools, such as R and Python. [link](https://www.neonscience.org/impact/observatory-blog/nsf-biocenters-unite-close-scientific-data-skills-gap-focus-phenology)--->
@@ -200,11 +200,7 @@ See [Products](https://jsta.rbind.io/products/) page
 
 - [WikiProject Lakes](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Lakes) (2017 - Present) -->
 
-<!--- Everglades Day (2016) Guided tours of science activities at the Loxahatchee Impoundment Landscape Assessment. 17th Annual Everglades Day, Loxahatchee National Wildlife Refuge.
-- National Public Radio (2016) Rising Seas Push Too Much Salt Into the Florida Everglades. [link](http://www.npr.org/2016/05/25/477014085/rising-seas-push-too-much-salt-into-the-florida-everglades)
-- PBS Newshour (2015) Florida's Everglades face new invasive threat: rising sea levels. [youtube](https://www.youtube.com/watch?v=ggOl-vaXIFk)
-
-## Honors and Awards
+<!--- ## Honors and Awards
 
 - GLEON Student Travel Award 2017
 - Invited participant to the [2017 rOpenSci Conference](http://unconf17.ropensci.org/)

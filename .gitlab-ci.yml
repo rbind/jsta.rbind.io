@@ -16,4 +16,4 @@ pages:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
       changes:
         - content/**/*
-        - .gitlab-ci.yml  
+        - .gitlab-ci.yml

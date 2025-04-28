@@ -1,4 +1,4 @@
-image: ubuntu:latest
+image: busybox:latest
 
 before_script:
   - wget https://github.com/gohugoio/hugo/releases/download/v0.83.1/hugo_0.83.1_Linux-64bit.tar.gz
